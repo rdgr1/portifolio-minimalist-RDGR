@@ -1,0 +1,17 @@
+.header-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    h1{
+        font-family: 'Gotham-Bold';
+        font-weight: 800;
+        font-size: 100px;
+    }
+    .subtitle-container{
+        font-family: 'Gotham-Light';
+        font-size: 40px;
+    }
+}
