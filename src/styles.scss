@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  font-family: 'Gotham-Book';
+  color: var(--white);
+}
+:root {
+  --black: #000000;
+  --white: #ffffff;
+}
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url(app/assets/fonts/Gotham-Light.otf) format('opentype');
+  font-weight: 200;
+}
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url(app/assets/fonts/Gotham-Bold.otf) format('opentype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url(app/assets/fonts/Gotham-Book.otf) format('opentype');
+}
