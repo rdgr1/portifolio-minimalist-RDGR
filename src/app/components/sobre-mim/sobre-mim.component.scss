@@ -1,0 +1,57 @@
+.main-container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .container-text-pic{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 279px;
+        .texto-sobre-mim h2{
+            font-size: 32px;
+            text-align: center;
+            padding-bottom: 24px;
+           }
+           p{
+            font-weight: 100;
+            font-size: 20px;
+           }
+    }
+    .container-experiencia-linguagens{
+        display: flex;
+        align-items: center;
+        .experiencia{
+            display: flex;
+            flex-direction: column;
+            h2{
+                text-align: center;
+                font-size: 32px;
+                padding-bottom: 35px;
+            }
+            h3{
+                font-size: 22px;
+                padding-bottom: 13px;
+            }
+            h4{
+                font-weight: 500;
+                font-size: 20px;
+                padding-bottom: 15px;
+            }
+            p{
+                font-weight: 200;
+                font-size: 16px;
+                padding-bottom: 10px;
+            }
+            span{
+                display: flex;
+                justify-content: center;
+                font-size: 17px;
+                font-weight: 600;
+            }
+        }    
+    }
+}

@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './header-index.component.scss'
 })
 export class HeaderIndexComponent {
-
 }

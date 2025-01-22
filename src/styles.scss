@@ -7,7 +7,7 @@ html body {
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  font-family: 'Gotham-Book';
+  font-family: 'Gotham';
   color: var(--white);
 }
 :root {
@@ -15,16 +15,27 @@ html body {
   --white: #ffffff;
 }
 @font-face {
-  font-family: 'Gotham-Light';
-  src: url(app/assets/fonts/Gotham-Light.otf) format('opentype');
+  font-family: 'Gotham';
+  src: url(/assets/fonts/Gotham-Light.otf) format('opentype');
   font-weight: 200;
 }
 @font-face {
-    font-family: 'Gotham-Bold';
-    src: url(app/assets/fonts/Gotham-Bold.otf) format('opentype');
+    font-family: 'Gotham';
+    src: url(/assets/fonts/Gotham-Bold.otf) format('opentype');
     font-weight: 800;
 }
 @font-face {
-    font-family: 'Gotham-Book';
-    src: url(app/assets/fonts/Gotham-Book.otf) format('opentype');
+    font-family: 'Gotham';
+    src: url(/assets/fonts/Gotham-Book.otf) format('opentype');
+    font-weight: 500;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url(/assets/fonts/Gotham-Medium.otf) format('opentype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url(/assets/fonts/Gotham-XLight.otf) format('opentype');
+  font-weight: 100;
 }

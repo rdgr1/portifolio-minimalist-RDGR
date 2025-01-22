@@ -1,17 +1,35 @@
-.header-container{
+header{
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--black);
+    position: relative;
+    padding-bottom: 35px;
     h1{
-        font-family: 'Gotham-Bold';
-        font-weight: 800;
-        font-size: 100px;
+        font-family: 'Gotham';
+        font-weight: 600;
+        font-size: 115px;
+        position: relative;
+        z-index: 1;
+        margin-right: 350px;
     }
     .subtitle-container{
-        font-family: 'Gotham-Light';
-        font-size: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Gotham';
+        font-size: 48px;
+        padding-top: 100px;
+        position: absolute;
+        top: 330px; /* Ajuste conforme necessário */
+        left: 900px; /* Ajuste conforme necessário */
+        z-index: 2;
+        font-weight: 100; 
+        .icons-container img{
+            padding: 10px;
+        }
     }
 }
