@@ -1,0 +1,22 @@
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        animation: float 1s infinite ease-in-out;
+    }
+    &:active{
+        transform: translateX(5px);
+    }
+    @keyframes float {
+        0% {
+            transform: translateY(0); /* Posição inicial */
+          }
+          50% {
+            transform: translateY(-10px); /* Sobe */
+          }
+          100% {
+            transform: translateY(0); /* Volta à posição inicial */
+          }
+    }
+}
