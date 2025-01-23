@@ -1,12 +1,10 @@
 .button-container {
     display: flex;
     align-items: center;
-  
     img {
       margin: 0 7px; // Espaçamento entre ícones e botão
       transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
-  
     button {
       width: 83px;
       height: 30px;
@@ -34,7 +32,7 @@
         background-color: var(--white);
         position: absolute;
         left: 7%; // Começa à esquerda
-        transition: left 0.5s ease-in-out, background-color 0.5s ease-in-out;
+        transition: left 0.8s ease-in-out, background-color 0.8s ease-in-out;
         button.active & {
           left: calc(100% - 26px);
           background-color: var(--black); 
