@@ -1,0 +1,51 @@
+.bar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 17px;
+    img{
+        margin-right: 15px;
+    }
+    .bar{
+        width: 322px;
+        height: 17px;
+        background-color: white;
+        border-radius: 22px;
+        .level1{
+            width: 50%;
+            height: 17px;
+            background-color: #B71C1C;
+            border-radius: 22px;
+        }
+        .level2{
+            width: 85%;
+            height: 17px;
+            background-color: #EA4134;
+            border-radius: 22px;
+        }
+        .level3{
+            width: 40%;
+            height: 17px;
+            background-color: #1976D2;
+            border-radius: 22px;
+        }
+        .level4{
+            width: 60%;
+            height: 17px;
+            background-color: #FFC107;
+            border-radius: 22px;
+        }
+        .level5{
+            width: 40%;
+            height: 17px;
+            background-color: #0277BD;
+            border-radius: 22px;
+        }
+        .level6{
+            width: 60%;
+            height: 17px;
+            background-color: #8BC34A;
+            border-radius: 22px;
+        }
+    }
+}
