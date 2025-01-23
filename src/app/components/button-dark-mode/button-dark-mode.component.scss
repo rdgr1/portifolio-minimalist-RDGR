@@ -1,0 +1,45 @@
+.button-container {
+    display: flex;
+    align-items: center;
+  
+    img {
+      margin: 0 7px; // Espaçamento entre ícones e botão
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+  
+    button {
+      width: 83px;
+      height: 30px;
+      background-color: var(--black); // Preto no estado inicial
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: background-color 0.5s ease-in-out;
+      &.active {
+        background-color: var(--white);
+        .circle{
+            width: 23px;
+            height: 23px;
+            background-color: var(--black);
+            left: calc(100% - 28px);
+        }
+    }
+      .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--white);
+        position: absolute;
+        left: 7%; // Começa à esquerda
+        transition: left 0.5s ease-in-out, background-color 0.5s ease-in-out;
+        button.active & {
+          left: calc(100% - 26px);
+          background-color: var(--black); 
+        }
+      }
+    }
+  }
+  

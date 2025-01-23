@@ -1,0 +1,15 @@
+<div class="button-container">
+    <img
+      [src]="!isActive ? '/assets/imgs/png/Sun-Symbol.png' : ''"
+      class="symbol"
+    />
+    <button (click)="toggleButton()" [class.active]="isActive">
+      <div class="circle"></div>
+    </button>
+  
+    <img
+      [src]="isActive ? '/assets/imgs/png/Moon-Symbol.png' : ''"
+      class="symbol"
+    />
+  </div>
+  
