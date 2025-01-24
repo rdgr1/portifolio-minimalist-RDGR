@@ -1,0 +1,63 @@
+.container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 224px;
+    height: 328px;
+    background-color: white;
+    border-radius: 22px;
+    gap: 16px; /* Ajuste para manter espaçamento controlado */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative; /* Necessário para posicionar o conteúdo absoluto */
+    overflow: hidden; /* Evita que o conteúdo extrapole */
+    transition: all 0.3s ease; /* Transição suave no hover */
+}
+
+.container-card:hover {
+    background: none;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Seção de texto (título e descrição) */
+.minify-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Permite posicionar dentro do card */
+    top: 38%; /* Centraliza verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajuste para centralização exata */
+    opacity: 0; /* Começa escondido */
+    text-align: center;
+    color: var(--black);
+    transition: opacity 0.3s ease; /* Animação para suavizar a aparição */
+    padding: 8px; /* Espaço interno para evitar que o texto toque as bordas */
+}
+
+.container-card:hover .minify-projects {
+    opacity: 1; /* Mostra o conteúdo no hover */
+}
+
+/* Links de ícones */
+.links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Mantém espaçamento fixo entre ícones */
+    position: absolute; /* Posiciona na parte inferior do card */
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    word-wrap: break-word; /* Evita quebra inesperada de texto */
+    overflow-wrap: break-word;
+}
+
+.links-container img {
+    width: 45px; /* Define tamanho fixo dos ícones */
+    object-fit: contain;
+}
