@@ -5,7 +5,7 @@ nav {
     width: 760px;
     height: 80px;
     border-radius: 22px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     margin-top: 20px;
     .container-navbar {
         display: flex;
@@ -24,7 +24,7 @@ nav {
 
                 .nav-link {
                     text-decoration: none;
-                    color: white;
+                    color: rgb(0, 0, 0);
                     transition: color 0.3s ease;
 
                     &:hover {
@@ -37,7 +37,7 @@ nav {
                         bottom: -5px;
                         width: 40%;
                         height: 4px;
-                        background-color: #ffffff;
+                        background-color: #000000;
                         border-radius: 2px;
                         transition: width 0.3s ease;
                         transform: translateX(-50%);
@@ -51,7 +51,7 @@ nav {
             align-items: center;
             width: 140px;
             height: 40px;
-            background-color: white;
+            background-color: rgb(0, 0, 0);
             border-radius: 22px;
             position: absolute;
             right: 610px;
@@ -60,7 +60,7 @@ nav {
             text-decoration: none;
             font-family: 'Gotham';
             font-weight: 300;
-            color: var(--black);
+            color: var(--white);
         }
     }
 }

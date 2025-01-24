@@ -1,0 +1,29 @@
+.project-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        margin: 50px;
+    }
+    .container-cards{
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+        align-items: center;
+        gap: 17px;
+        margin-bottom: 21px;
+    }
+    .footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .social-links{
+            display: flex;
+            position: absolute;
+            left: 800px;
+            gap: 18px;
+        }
+    }
+}
