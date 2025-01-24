@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { SobreMimComponent } from "../../components/sobre-mim/sobre-mim.component";
-import { NavBarComponent } from "../../components/nav-bar/nav-bar.component";
-import { SetaComponentComponent } from "../../components/seta-component/seta-component.component";
-import { CardProjetoComponent } from "../../components/card-projeto/card-projeto.component";
+import { InputFormularioComponent } from "../../components/input-formulario/input-formulario.component";
+import { FormularioLayoutComponent } from "../../components/formulario-layout/formulario-layout.component";
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-test',
   standalone: true,
-  imports: [SobreMimComponent, NavBarComponent, SetaComponentComponent, CardProjetoComponent],
+  imports: [InputFormularioComponent, FormularioLayoutComponent,ReactiveFormsModule],
   templateUrl: './test.component.html',
   styleUrl: './test.component.scss'
 })
