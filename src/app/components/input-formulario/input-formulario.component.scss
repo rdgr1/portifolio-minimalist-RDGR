@@ -1,0 +1,32 @@
+.input-wrapper{
+    label{
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 800;
+    }
+    input{
+        width: 100%;
+        border: 1px solid var(--white);
+        border-radius: 12px;
+        font-size: 16px;
+        padding: 16px 0 16px 16px;
+        background-color: transparent;
+        color: var(--white);
+        outline: none;
+        margin: 10px 12px 0 0;
+        font-weight: 600;
+        
+        &:valid:not(:placeholder-shown), &:invalid:not(:placeholder-shown){
+            background-repeat: no-repeat;
+            background-position: calc(100% - 10px);
+            background-size: 25px;
+        }
+        &:invalid:not(:placeholder-shown){
+            border: 2px solid #ff4949;
+            background-image: url(/assets/imgs/png/unchecked-mark.png);
+        }
+        &:valid:not(:placeholder-shown){
+            background-image: url(/assets/imgs/png/checked-mark.png);
+        }
+    }
+}
