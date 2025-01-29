@@ -1,3 +1,5 @@
-export type ConatoResponse = {
+export type ContatoResponse = {
+    name : string,
+    email : string,
     message : string
 }

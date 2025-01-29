@@ -1,25 +1,33 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { InputFormularioComponent } from "../input-formulario/input-formulario.component";
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router } from 'express';
-import { ContatoService } from '../../services/contato.service';
+import { CommonModule } from '@angular/common';
+import { EmailService } from '../../services/email.service';
 
 @Component({
   selector: 'app-formulario-layout',
   standalone: true,
-  imports: [InputFormularioComponent,ReactiveFormsModule],
+  imports: [InputFormularioComponent,ReactiveFormsModule,CommonModule],
   templateUrl: './formulario-layout.component.html',
   styleUrl: './formulario-layout.component.scss'
 })
 export class FormularioLayoutComponent {
-  constructor(private router: Router, private contatoService: ContatoService){
+  constructor(private emailService: EmailService){
   }
   contatoForm = new FormGroup({
     name: new FormControl('',[Validators.required,Validators.minLength(5)]),
     email: new FormControl('',[Validators.required,Validators.email]),
     message: new FormControl('',[Validators.required,Validators.minLength(10)])
   });
-  submit(){
-
+  submit() {
+    if (this.contatoForm.valid) {
+      const { name, email, message } = this.contatoForm.value;
+  
+      this.emailService.submitForm(name!, email!, message!).subscribe(
+        (response) => console.log('Requisição enviada com sucesso:', response),
+        (error) => console.error('Erro na requisição:', error)
+      );
+    }
   }
+  
 }

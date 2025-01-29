@@ -1,20 +1,21 @@
 .input-wrapper{
+    margin-bottom: 25px;
     label{
-    font-size: 20px;
+    font-size: 26px;
     color: var(--white);
-    font-weight: 800;
+    font-weight: 100;
     }
     input{
         width: 100%;
-        border: 1px solid var(--white);
+        border: 2px solid var(--white);
         border-radius: 12px;
-        font-size: 16px;
-        padding: 16px 0 16px 16px;
+        font-size: 18px;
+        padding: 20px 0 20px 20px;
         background-color: transparent;
         color: var(--white);
         outline: none;
         margin: 10px 12px 0 0;
-        font-weight: 600;
+        font-weight: 200;
         
         &:valid:not(:placeholder-shown), &:invalid:not(:placeholder-shown){
             background-repeat: no-repeat;

@@ -1,0 +1,30 @@
+.form-container{
+    h1{
+        font-weight: 800;
+        margin-bottom: 5px;
+        font-size: 36px;
+    }
+    h2{
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 28px;
+    }
+    span{
+        font-size: 45px;
+    }
+    .buttonForm{
+        margin-top: 50px;
+        button{
+            width: 100%;
+            padding: 17px;
+            border-radius: 12px;
+            font-size: 25px;
+            font-weight: 100;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}

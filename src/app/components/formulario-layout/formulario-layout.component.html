@@ -1,6 +1,6 @@
 <div class="form-container">
     <h1>Interessado no meu Trabalho ?</h1>
-    <h2>Mande uma mensagem abaixo :)</h2>
+    <h2>Mande uma mensagem abaixo <span> :)</span></h2>
     <form [formGroup]="contatoForm" (ngSubmit)="submit()">
         <app-input-formulario
         formControlName="name"
@@ -22,7 +22,8 @@
         required
         ></app-input-formulario>
         <app-input-formulario
-        formControlName="mensagem"
+        class="message-container"
+        formControlName="message"
         inputName="mensagem"
         type="text"
         label="Mensagem"
@@ -31,5 +32,8 @@
         minlength="10"
         required
         ></app-input-formulario>
+       <div class="buttonForm">
+        <button type="submit" (click)="submit()">Enviar</button>
+       </div>
     </form>
 </div>
