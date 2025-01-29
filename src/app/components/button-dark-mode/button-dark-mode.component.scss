@@ -8,7 +8,7 @@
     button {
       width: 83px;
       height: 30px;
-      background-color: var(--black); // Preto no estado inicial
+      background-color: black; // Preto no estado inicial
       border: none;
       border-radius: 100px;
       cursor: pointer;
@@ -17,11 +17,11 @@
       position: relative;
       transition: background-color 0.5s ease-in-out;
       &.active {
-        background-color: var(--white);
+        background-color: white;
         .circle{
             width: 23px;
             height: 23px;
-            background-color: var(--black);
+            background-color: black;
             left: calc(100% - 28px);
         }
     }
@@ -29,13 +29,13 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: var(--white);
+        background-color: white;
         position: absolute;
         left: 7%; // Começa à esquerda
         transition: left 0.8s ease-in-out, background-color 0.8s ease-in-out;
         button.active & {
           left: calc(100% - 26px);
-          background-color: var(--black); 
+          background-color: black; 
         }
       }
     }
