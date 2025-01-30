@@ -1,35 +1,44 @@
-header{
+header {
     width: 100%;
-    min-height: 100vh;
     display: flex;
+    flex-direction: row; /* Alinha os elementos verticalmente */
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: var(--black);
-    position: relative;
     padding-bottom: 35px;
-    h1{
-        font-family: 'Gotham';
-        font-weight: 600;
+    position: relative;
+    gap: 20px; /* Define um contexto para posicionamento */
+    h1 {
+        font-family: 'SF-pro';
+        font-weight: 650;
         font-size: 115px;
         position: relative;
         z-index: 1;
-        margin-right: 300px;
+        text-align: center; /* Garante que fique centralizado */
+        margin: 0; /* Remove margem lateral fixa */
     }
-    .subtitle-container{
+
+    .subtitle-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        font-family: 'Gotham';
+        font-family: 'SF-pro';
         font-size: 48px;
-        padding-top: 100px;
-        position: absolute;
-        top: 330px; /* Ajuste conforme necessário */
-        left: 750px; /* Ajuste conforme necessário */
-        z-index: 2;
-        font-weight: 100; 
-        .icons-container img{
-            padding: 10px;
+        font-weight: 200;
+        padding-top: 20px;
+        margin-top: 55px; /* Ajuste para garantir espaçamento abaixo do título */
+        margin-left: -20px;
+        /* Evita o uso de `position: absolute`, centralizando naturalmente */
+        .icons-container {
+            display: flex;
+            gap: 10px; /* Espaçamento entre os ícones */
+            margin-top: 10px;
+        }
+
+        .icons-container img {
+            width: 50px; /* Define um tamanho adequado para os ícones */
+            height: auto;
+            padding: 5px;
         }
     }
 }

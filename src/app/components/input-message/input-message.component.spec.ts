@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtomThemeComponent } from './buttom-theme.component';
+import { InputMessageComponent } from './input-message.component';
 
-describe('ButtomThemeComponent', () => {
-  let component: ButtomThemeComponent;
-  let fixture: ComponentFixture<ButtomThemeComponent>;
+describe('InputMessageComponent', () => {
+  let component: InputMessageComponent;
+  let fixture: ComponentFixture<InputMessageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ButtomThemeComponent]
+      imports: [InputMessageComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ButtomThemeComponent);
+    fixture = TestBed.createComponent(InputMessageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,4 +1,4 @@
-<div class="button-container">
+<div *ngIf="isRendered" class="button-container">
     <img
       [src]="!isActive ? '/assets/imgs/png/Sun-Symbol.png' : ''"
       class="symbol"

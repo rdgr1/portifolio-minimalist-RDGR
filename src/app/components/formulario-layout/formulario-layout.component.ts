@@ -3,11 +3,12 @@ import { InputFormularioComponent } from "../input-formulario/input-formulario.c
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { EmailService } from '../../services/email.service';
+import { InputMessageComponent } from '../input-message/input-message.component';
 
 @Component({
   selector: 'app-formulario-layout',
   standalone: true,
-  imports: [InputFormularioComponent,ReactiveFormsModule,CommonModule],
+  imports: [InputFormularioComponent,ReactiveFormsModule,CommonModule,InputMessageComponent],
   templateUrl: './formulario-layout.component.html',
   styleUrl: './formulario-layout.component.scss'
 })

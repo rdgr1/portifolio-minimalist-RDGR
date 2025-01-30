@@ -1,1 +1,12 @@
-<app-button-dark-mode></app-button-dark-mode>
+<div class="container" [class.dark-mode]="isDarkMode">
+    <div class="button-dark-mode" (click)="toggleDarkMode()">
+      <app-button-dark-mode></app-button-dark-mode>
+    </div>
+    <div class="header-index">
+      <app-header-index></app-header-index>
+    </div>
+    <app-seta-component
+    (navigate)="navigate()"
+    ></app-seta-component>
+  </div>
+  

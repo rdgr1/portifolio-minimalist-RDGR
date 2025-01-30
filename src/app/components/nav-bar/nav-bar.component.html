@@ -1,25 +1,39 @@
 <nav>
-    <div class="container-navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link"
-                (click)="setActiveLink('inicio')"
-                [ngClass]="{active: activeLink === 'inicio'}"
-                >Início</a></li>
-            <li class="nav-item">
-                <a class="nav-link"
-                (click)="setActiveLink('sobremim')"
-                [ngClass]="{active: activeLink === 'sobremim'}"
-                >Sobre Mim</a></li>
-            <li class="nav-item">
-                <a class="nav-link"(click)="setActiveLink('projetos')"
-                [ngClass]="{active: activeLink === 'projetos'}"
-                >Projetos</a></li>
-            <li class="nav-item">
-                <a class="nav-link"(click)="setActiveLink('contato')"
-                [ngClass]="{active: activeLink === 'contato'}"
-                >Contato</a></li>
-        </ul>
-        <span><a class="buttom-resumo" href="">Resumo</a></span>
-    </div>
+  <div class="container-navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/index"
+           [routerLinkActive]="'active'"
+           (click)="setActiveLink('inicio')">
+          Início
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/sobre"
+           [routerLinkActive]="'active'"
+           (click)="setActiveLink('sobremim')">
+          Sobre Mim
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/projetos"
+           [routerLinkActive]="'active'"
+           (click)="setActiveLink('projetos')">
+          Projetos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/contato"
+           [routerLinkActive]="'active'"
+           (click)="setActiveLink('contato')">
+          Contato
+        </a>
+      </li>
+    </ul>
+    <span><a class="buttom-resumo" href="">Resumo</a></span>
+  </div>
 </nav>

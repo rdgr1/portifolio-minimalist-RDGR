@@ -1,51 +1,58 @@
 nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    width: 760px;
-    height: 80px;
+    width: 100%;
+    max-width: 900px;
+    height: 65px;
     border-radius: 22px;
     background-color: rgb(255, 255, 255);
-    margin-top: 20px;
+    margin: 20px;
+
     .container-navbar {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start; /* Mantém os elementos bem distribuídos */
         align-items: center;
+        width: 100%;
         ul {
             display: flex;
             gap: 50px;
             list-style: none;
-            font-family: 'Gotham';
             font-weight: 600;
-            font-size: 20px;
-            margin-left: 70px;
-            .nav-item {
-                position: relative;
+            font-size: 18px;
+            padding-left: 50px;
+            background-color: white;
+            /* Ajusta para evitar margin */
+        }
 
-                .nav-link {
-                    text-decoration: none;
-                    color: rgb(0, 0, 0);
-                    transition: color 0.3s ease;
+        .nav-item {
+            position: relative;
+            .nav-link {
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                transition: color 0.3s ease;
+                background-color: white;
+                cursor: pointer;
+                &:hover {
+                    color: #b9b9b9;
+                }
 
-                    &:hover {
-                        color: #b9b9b9;
-                    }
-                    &.active::after {
-                        content: '';
-                        position: absolute;
-                        left: 50%;
-                        bottom: -5px;
-                        width: 40%;
-                        height: 4px;
-                        background-color: #000000;
-                        border-radius: 2px;
-                        transition: width 0.3s ease;
-                        transform: translateX(-50%);
-                    }
+                &.active::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: -5px;
+                    width: 40%;
+                    height: 3px;
+                    background-color: #000000;
+                    border-radius: 2px;
+                    transition: width 0.3s ease;
+                    transform: translateX(-50%);
                 }
             }
         }
-        span {
+
+        .resumo-button {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,14 +60,25 @@ nav {
             height: 40px;
             background-color: rgb(0, 0, 0);
             border-radius: 22px;
-            position: absolute;
-            right: 610px;
+            margin-right: 20px;
         }
+
         .buttom-resumo {
             text-decoration: none;
-            font-family: 'Gotham';
-            font-weight: 300;
+            font-weight: 600;
             color: var(--white);
+            padding: 10px 20px 10px 20px;
+            background-color: #000000;
+            margin-left: 35px;
+            font-size: 19px;
+            border-radius: 12px;
+            &:hover{
+                transition: background 0.5s ease-in-out;
+                padding: 10px 18px 10px 18px;
+                background-color: transparent;
+                border: rgb(0, 0, 0) solid 2px;
+                color: var(--black);
+            }
         }
     }
 }
