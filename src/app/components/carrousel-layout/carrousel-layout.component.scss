@@ -1,43 +1,49 @@
-.slider{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
     position: relative;
-    .item{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 350px;
-        height: 500px;
-        background-color: var(--white);
-        border-radius: 14px;
-        h1{
-            color: var(--black);
-            font-size: 30px;
-            font-weight: 200;
-            margin-bottom: 15px;
-        }
-        img{
-            width: 300px;
-            height: 400px;
-            margin-bottom: 10px;
-            border-radius: 14px;
-        }
-    }
-    button{
-        position: absolute;
-        border: none;
-        background: transparent;
-        font-size: 50px;
+    h1{
+        font-size: 32px;
         font-weight: 600;
-        color: var(--white);
     }
-    #prev {
-        right: 1050px;
-    }
-    #next {
-        left: 1050px
+    .slider {
+        position: absolute;
+        top: 10%;
+        width: 400px;
+        height: 250px;
+        left: calc(50% - 100px);
+        transform-style: preserve-3d;
+        transform: perspective(2000px);
+        animation: autoRun 18s linear infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes autoRun {
+            from {
+                transform: perspective(2000px) rotateX(-2deg) rotateY(0deg);
+            }
+            to {
+                transform: perspective(2000px) rotateX(-2deg) rotateY(360deg);
+            }
+        }
+
+        .item {
+            position: absolute;
+            inset: 0 0 0 0;
+            transform: rotateX(-2deg) rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(450px);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 10px;
+                backface-visibility: hidden;
+                image-rendering: optimizeQuality;
+                filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); // Suaviza a borda
+            }
+        }
     }
 }

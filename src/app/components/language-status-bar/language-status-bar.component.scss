@@ -14,13 +14,12 @@
       background-color: white;
       border-radius: 22px;
       overflow: hidden; /* Garante que as barras internas não ultrapassem os limites */
-  
       div {
         height: 17px;
         border-radius: 22px;
         width: 0; /* Começa com largura 0 */
         transition: width 1s ease-in-out; /* Transição suave da largura */
-
+        border: 1px solid;
       }
       .level1 {
         background-color: #b71c1c;
