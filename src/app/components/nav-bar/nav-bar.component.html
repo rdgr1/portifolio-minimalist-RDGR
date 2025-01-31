@@ -1,4 +1,4 @@
-<nav>
+<nav [class.hidden]="isInProjectSection">
   <div class="container-navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -15,6 +15,14 @@
            [routerLinkActive]="'active'"
            (click)="setActiveLink('sobremim')">
           Sobre Mim
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/destaques"
+           [routerLinkActive]="'active'"
+           (click)="setActiveLink('destaques')">
+          Destaques
         </a>
       </li>
       <li class="nav-item">

@@ -4,6 +4,7 @@ import { IndexComponent } from './pages/index/index.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { ProjetosComponent } from './pages/projetos/projetos.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { DestaquesComponent } from './pages/destaques/destaques.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -24,6 +25,11 @@ export const routes: Routes = [
   {
     path: 'contato',
     component: FormularioComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'destaques',
+    component: DestaquesComponent,
     pathMatch: 'full',
   }
 ];

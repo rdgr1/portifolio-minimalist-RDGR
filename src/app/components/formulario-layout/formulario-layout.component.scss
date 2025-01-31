@@ -16,6 +16,13 @@
     }
     .buttonForm{
         margin-top: 50px;
+        p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            color: red;
+        }
         button{
             width: 100%;
             padding: 17px;

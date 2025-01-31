@@ -1,27 +1,30 @@
 <div class="form-container">
-    <h1>Interessado no meu Trabalho ?</h1>
+    <h1>Interessado no meu Trabalho?</h1>
     <h2>Mande uma mensagem abaixo <span> :)</span></h2>
+  
     <form [formGroup]="contatoForm" (ngSubmit)="submit()">
-        <app-input-formulario
+      <app-input-formulario
         formControlName="name"
         inputName="name"
-        type="name"
+        type="text"
         label="Nome"
         placeholder="Nome"
         autocomplete="name"
         minlength="6"
-        required
-        ></app-input-formulario>
-        <app-input-formulario
+        required>
+      </app-input-formulario>
+  
+      <app-input-formulario
         formControlName="email"
         inputName="email"
         type="email"
         label="Email"
         placeholder="Seu Melhor Email!"
         autocomplete="email"
-        required
-        ></app-input-formulario>
-        <app-input-message
+        required>
+      </app-input-formulario>
+  
+      <app-input-message
         class="message-container"
         formControlName="message"
         inputName="mensagem"
@@ -30,10 +33,16 @@
         placeholder="Escreva aqui seu interesse ou como posso ajudá-lo(a)"
         autocomplete="on"
         minlength="10"
-        required
-        ></app-input-message>
-       <div class="buttonForm">
-        <button type="submit" (click)="submit()">Enviar</button>
-       </div>
+        required>
+      </app-input-message>
+  
+      <div class="buttonForm">
+        <button type="submit" [disabled]="isDisabled">
+          {{ isDisabled ? 'Enviando...' : 'Enviar e-mail' }}
+        </button>
+        <p *ngIf="hasClickedBefore">
+        </p>
+      </div>
     </form>
-</div>
+  </div>
+  
