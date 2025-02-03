@@ -3,7 +3,12 @@
     <div class="carrousel-container">
         <app-carrousel-layout></app-carrousel-layout>
     </div>
+    <div class="slider-logos">
+        <app-slider-logo></app-slider-logo>
+    </div>
     <div class="arrow">
-        <app-seta-component></app-seta-component>
+        <app-seta-component
+        (navigate)="navigate()"
+        ></app-seta-component>
     </div>
 </div>

@@ -3,8 +3,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    position: relative;
     .carrousel-container{
         margin-right: 40px;
+    }
+    .arrow{
+        position: absolute;
+        top: 850px;
+    }
+    .slider-logos{
+        width: 100%;
+        position: absolute;
+        top: 650px;
     }
 }

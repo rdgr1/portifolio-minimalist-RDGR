@@ -14,6 +14,6 @@ import { Router } from '@angular/router';
 export class SobreComponent {
   constructor(private router: Router){}
 navigate(){
-  this.router.navigate(['destaques'])
+  this.router.navigate(['projetos'])
 }
 }

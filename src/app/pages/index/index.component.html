@@ -1,4 +1,12 @@
 <div class="container" [class.dark-mode]="isDarkMode">
+    <div class="navbar"
+    (mouseover)="isHovered = true"
+    (mouseleave)="isHovered = false"
+    >
+      <app-nav-bar
+      *ngIf="isHovered"
+      ></app-nav-bar>
+    </div>
     <div class="button-dark-mode" (click)="toggleDarkMode()">
       <app-button-dark-mode></app-button-dark-mode>
     </div>

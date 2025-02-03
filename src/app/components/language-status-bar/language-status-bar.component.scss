@@ -11,7 +11,7 @@
     .bar {
       width: 322px;
       height: 17px;
-      background-color: white;
+      background-color: var(--white);
       border-radius: 22px;
       overflow: hidden; /* Garante que as barras internas não ultrapassem os limites */
       div {

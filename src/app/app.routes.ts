@@ -26,10 +26,5 @@ export const routes: Routes = [
     path: 'contato',
     component: FormularioComponent,
     pathMatch: 'full',
-  },
-  {
-    path: 'destaques',
-    component: DestaquesComponent,
-    pathMatch: 'full',
   }
 ];

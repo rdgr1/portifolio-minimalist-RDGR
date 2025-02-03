@@ -5,7 +5,7 @@
     align-items: center;
     width: 224px;
     height: 328px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 22px;
     gap: 16px; /* Ajuste para manter espaçamento controlado */
     background-repeat: no-repeat;
@@ -18,7 +18,7 @@
 
 .container-card:hover {
     background: none;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
 }
 
 /* Seção de texto (título e descrição) */
@@ -27,15 +27,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute; /* Permite posicionar dentro do card */
-    top: 38%; /* Centraliza verticalmente */
+    position: absolute;
+    top: 38%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Ajuste para centralização exata */
-    opacity: 0; /* Começa escondido */
+    transform: translate(-50%, -50%);
+    opacity: 0;
     text-align: center;
     color: var(--black);
-    transition: opacity 0.3s ease; /* Animação para suavizar a aparição */
-    padding: 8px; /* Espaço interno para evitar que o texto toque as bordas */
+    transition: opacity 0.3s ease;
+    padding: 8px;
+    max-width: 90%; /* Ajuste para evitar overflow */
+    word-wrap: break-word; /* Garante que palavras longas sejam quebradas */
+    white-space: normal; /* Permite que o texto quebre automaticamente */ /* Espaço interno para evitar que o texto toque as bordas */
+    h2{
+        font-size: 20px;
+        max-width: 90%; /* Ajuste para evitar overflow */
+        word-wrap: normal; /* Garante quebra de palavras */
+        white-space: normal; 
+    }
+    p{
+        font-size: 16px;
+        max-width: 90%; /* Define largura máxima para evitar estouro */
+        word-wrap: break-word; 
+        white-space: normal;
+    }
 }
 
 .container-card:hover .minify-projects {

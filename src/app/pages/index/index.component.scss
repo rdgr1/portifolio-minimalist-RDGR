@@ -1,14 +1,25 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    transition: container 0.7s ease-in-out;
-    .header-index{
+    transition: 0.7s ease-in-out;
+
+    .navbar {
+        position: absolute;
+        min-width: 200px;  /* Define um tamanho mínimo */
+        height: 50px;  /* Define altura mínima */
+        top: 10px;  /* Ajuste a posição conforme necessário */
+        left: 50%;  
+        transform: translateX(-50%);
+    }
+
+    .header-index {
         padding: 200px;
     }
-    .button-dark-mode{
+
+    .button-dark-mode {
         padding-top: 43px;
         position: relative;
         left: 800px;

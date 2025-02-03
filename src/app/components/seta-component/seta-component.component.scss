@@ -2,6 +2,11 @@ button{
     background-color: transparent;
     border: none;
     cursor: pointer;
+    svg{
+      fill: var(--white);
+      width: 65px;
+      height: 65px;
+    }
     &:hover{
         animation: float 1s infinite ease-in-out;
     }

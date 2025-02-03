@@ -6,7 +6,7 @@ nav {
     max-width: 900px;
     height: 65px;
     border-radius: 22px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
     margin: 20px;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; // Suaviza a animação
 
@@ -23,7 +23,7 @@ nav {
             font-weight: 600;
             font-size: 18px;
             padding-left: 50px;
-            background-color: white;
+            background-color: var(--white);
         }
 
         .nav-item {
@@ -31,9 +31,9 @@ nav {
 
             .nav-link {
                 text-decoration: none;
-                color: rgb(0, 0, 0);
+                color: var(--black);
                 transition: color 0.3s ease;
-                background-color: white;
+                background-color: var(--white);
                 cursor: pointer;
 
                 &:hover {
@@ -47,7 +47,7 @@ nav {
                     bottom: -5px;
                     width: 40%;
                     height: 3px;
-                    background-color: #000000;
+                    background-color: var(--black);
                     border-radius: 2px;
                     transition: width 0.3s ease;
                     transform: translateX(-50%);
@@ -61,7 +61,7 @@ nav {
             align-items: center;
             width: 140px;
             height: 40px;
-            background-color: rgb(0, 0, 0);
+            background-color: var(--black);
             border-radius: 22px;
             margin-right: 20px;
         }
@@ -71,7 +71,7 @@ nav {
             font-weight: 600;
             color: var(--white);
             padding: 10px 20px 10px 20px;
-            background-color: #000000;
+            background-color: var(--black);
             margin-left: 35px;
             font-size: 19px;
             border-radius: 12px;
@@ -80,7 +80,7 @@ nav {
                 transition: background 0.5s ease-in-out;
                 padding: 10px 18px 10px 18px;
                 background-color: transparent;
-                border: rgb(0, 0, 0) solid 2px;
+                border:var(--black) solid 2px;
                 color: var(--black);
             }
         }

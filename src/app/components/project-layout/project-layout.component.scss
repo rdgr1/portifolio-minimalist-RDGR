@@ -24,8 +24,13 @@
         .social-links{
             display: flex;
             position: absolute;
-            left: 800px;
+            left: 700px;
             gap: 18px;
+            a svg{
+                width: 45px;
+                height: 45px;
+            }
         }
     }
+
 }
