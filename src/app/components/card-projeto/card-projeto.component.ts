@@ -9,7 +9,20 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card-projeto.component.scss'
 })
 export class CardProjetoComponent {
+isHovered: boolean = false;
+isHoveredGlobal: boolean = false;
+
 @Input() title:string = "";
 @Input() text:string = "";
 @Input() linkImg:string = "";
+@Input() linkProject: string = "";
+@Input() linkGithub: string = "";
+
+onMouseEnter() {
+  this.isHovered = true;
+}
+
+onMouseLeave() {
+  this.isHovered = false;
+}
 } 

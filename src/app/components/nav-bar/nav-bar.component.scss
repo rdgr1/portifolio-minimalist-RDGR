@@ -40,7 +40,7 @@ nav {
                     color: #b9b9b9;
                 }
 
-                &.active::after {
+               /* &.active::after {
                     content: '';
                     position: absolute;
                     left: 50%;
@@ -52,20 +52,12 @@ nav {
                     transition: width 0.3s ease;
                     transform: translateX(-50%);
                 }
+                    */
             }
         }
-
-        .resumo-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 140px;
-            height: 40px;
-            background-color: var(--black);
-            border-radius: 22px;
-            margin-right: 20px;
+        span{
+            margin-right: 10px;
         }
-
         .buttom-resumo {
             text-decoration: none;
             font-weight: 600;

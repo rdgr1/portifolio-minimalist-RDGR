@@ -1,47 +1,35 @@
-<nav [class.hidden]="isInProjectSection">
+<nav>
   <div class="container-navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link"
-           routerLink="/index"
-           [routerLinkActive]="'active'"
-           (click)="setActiveLink('inicio')">
+           [ngClass]="{'active': activeLink === 'inicio'}"
+           (click)="scrollToSection('inicio')">
           Início
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link"
-           routerLink="/sobre"
-           [routerLinkActive]="'active'"
-           (click)="setActiveLink('sobremim')">
+           [ngClass]="{'active': activeLink === 'sobre'}"
+           (click)="scrollToSection('sobre')">
           Sobre Mim
         </a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link"
-           routerLink="/destaques"
-           [routerLinkActive]="'active'"
-           (click)="setActiveLink('destaques')">
-          Destaques
-        </a>
-      </li> -->
       <li class="nav-item">
         <a class="nav-link"
-           routerLink="/projetos"
-           [routerLinkActive]="'active'"
-           (click)="setActiveLink('projetos')">
+           [ngClass]="{'active': activeLink === 'projetos'}"
+           (click)="scrollToSection('projetos')">
           Projetos
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link"
-           routerLink="/contato"
-           [routerLinkActive]="'active'"
-           (click)="setActiveLink('contato')">
+           [ngClass]="{'active': activeLink === 'formulario'}"
+           (click)="scrollToSection('formulario')">
           Contato
         </a>
       </li>
     </ul>
-    <span><a class="buttom-resumo" href="">Resumo</a></span>
+    <span><a href="/assets/imgs/pdfs/curriculo" target="_blank" class="buttom-resumo">Resumo</a></span>
   </div>
 </nav>

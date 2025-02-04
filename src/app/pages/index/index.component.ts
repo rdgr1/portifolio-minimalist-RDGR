@@ -14,13 +14,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './index.component.scss'
 })
 export class IndexComponent {
+  isScrolled: boolean = false;
   isDarkMode: boolean = false;
   isHovered: boolean = false;
-  constructor(private router: Router){}
+  constructor(){}
   toggleDarkMode(): void{
     this.isDarkMode = !this.isDarkMode;
   }
-  navigate(): void{
-    this.router.navigate(["sobre"])
+  scrollToSection(sectionId: string):void{
+    document.getElementById(sectionId)?.scrollIntoView({behavior:'smooth'});
   }
 }

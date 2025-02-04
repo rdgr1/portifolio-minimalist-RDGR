@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CardProjetoComponent } from "../card-projeto/card-projeto.component";
 import { SetaComponentComponent } from "../seta-component/seta-component.component";
-import { Router } from '@angular/router';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { CommonModule } from '@angular/common';
 
@@ -14,9 +13,9 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectLayoutComponent {
   isHovered : boolean = false;
-  constructor(private router: Router){}
-  navigate(){
-    this.router.navigate(['contato'])
-  }
+  constructor(){}
+  scrollToSection(sectionId: string): void{
+    document.getElementById(sectionId)?.scrollIntoView({behavior: 'smooth'})
+}
 
 }

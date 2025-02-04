@@ -7,54 +7,66 @@
     </div>
     <div class="container-cards">
         <app-card-projeto
-            [title]="'Sistema de Validação'"
-            [text]="'Sistema de Validação no processo de seleção para aprendizado e prática de Java POO.'"
-            [linkImg]="'/assets/imgs/sistema-de-validacao.png'">
+            [title]="'Projeto MS-Login-Email'"
+            [text]="'Este repositório contém dois microserviços que fazem parte de uma solução maior para gerenciamento de usuários e envio de emails.'"
+            [linkImg]="'/assets/imgs/cards/Card-Login-Email.png'"
+            [linkGithub]="'https://github.com/rdgr1/ms-for-save-send-mail'"
+            >
         </app-card-projeto>
         <app-card-projeto
-            [title]="'Conta Banco'"
-            [text]="'Aplicação que simula operações bancárias básicas, praticando fundamentos da linguagem Java.'"
-            [linkImg]="'/assets/imgs/conta-banco.png'">
+            [title]="'Sistema de Autenticação com JWT'"
+            [text]="'Este projeto implementa um sistema de autenticação utilizando JSON Web Tokens (JWT)'"
+            [linkImg]="'/assets/imgs/cards/Card-Login-Jwt.png'"
+            [linkGithub]="'https://github.com/rdgr1/login-jwt/tree/master'"
+            >
         </app-card-projeto>
         <app-card-projeto
-            [title]="'Fast Zero API'"
-            [text]="'Projeto para aprendizado do framework FastAPI, desenvolvendo APIs rápidas e eficientes em Python.'"
-            [linkImg]="'/assets/imgs/fast-zero-api.png'">
+            [title]="'Portifolio Minimalista'"
+            [text]="'Portifolio pessoal, Minimalista feito em Angular 18 e Typescript com funcionalidade de envio de emails no ecossistema spring'"
+            [linkImg]="'/assets/imgs/cards/Card-Portifollio.png'">
         </app-card-projeto>
         <app-card-projeto
-            [title]="'MS-Login-Email'"
-            [text]="'Repositório contendo dois microserviços para gerenciamento de usuários e envio de emails, utilizando Spring Boot e PostgreSQL.'"
-            [linkImg]="'/assets/imgs/ms-login-email.png'">
+            [title]="'Automação CAC Java'"
+            [text]="'Este projeto é uma aplicação desenvolvida para automatizar o processamento e manipulação de PDFs, além de gerenciar fluxos administrativos'"
+            [linkImg]="'/assets/imgs/cards/Card-CAC-Java.png'"
+            [linkGithub]="'https://github.com/rdgr1/Automacao-CAC-Java'"
+            >
         </app-card-projeto>
     </div>
     <div class="container-cards">
         <app-card-projeto
-            [title]="'Atividade 2'"
-            [text]="'Atividade focada no pilar de Herança da Programação Orientada a Objetos, desenvolvida em Java.'"
-            [linkImg]="'/assets/imgs/atividade-2.png'">
+            [title]="'Automação CAC Python'"
+            [text]="'Este projeto é uma aplicação desenvolvida para automatizar o processamento e manipulação de PDFs, além de gerenciar fluxos administrativos.'"
+            [linkImg]="'/assets/imgs/cards/Card-Python.png'"
+            [linkGithub]="'https://github.com/rdgr1/Automacao_CAC-py'"
+            >
         </app-card-projeto>
         <app-card-projeto
-            [title]="'Trabalho Final'"
-            [text]="'Projeto final demonstrando a aplicação dos conhecimentos adquiridos ao longo do curso.'"
-            [linkImg]="'/assets/imgs/trabalho-final.png'">
+            [title]="'Aprendizado de Spring'"
+            [text]="'Este repositório contém um projeto de aprendizado prático para explorar os conceitos e melhores práticas do Spring Boot.'"
+            [linkImg]="'/assets/imgs/cards/CardSpringAprendizado.png'"
+            [linkGithub]="'https://github.com/rdgr1/springboot-learning-rod'">
         </app-card-projeto>
         <app-card-projeto
-            [title]="'GitHub Readme Stats'"
-            [text]="'Fork do projeto GitHub Readme Stats para exibir estatísticas dinâmicas nos perfis do GitHub.'"
-            [linkImg]="'/assets/imgs/github-readme-stats.png'">
+            [title]="'Caderno Digital MD Rodger'"
+            [text]="'Meu Caderno Digital, para estudos no obsidian em markdown'"
+            [linkImg]="'/assets/imgs/cards/Card-Obsidian.png'"
+            [linkGithub]="'https://github.com/rdgr1/Caderno-Digital-MD_RODGER'"
+            >
         </app-card-projeto>
         <app-card-projeto
             [title]="'Token-Email'"
             [text]="'O projeto Token-Email foi desenvolvido como um teste para a criação de um template de e-mail SMTP utilizando HTML e CSS.'"
-            [linkImg]="'/assets/imgs/readme-template.png'">
+            [linkImg]="'/assets/imgs/cards/Card-Token-Email.png'"
+            [linkGithub]="'https://github.com/rdgr1/Token-Email'">
         </app-card-projeto>
     </div>
     <div class="footer">
         <app-seta-component
-        (navigate)="navigate()"
+        (navigate)="scrollToSection('formulario')"
         ></app-seta-component>
     <div class="social-links">
-        <a href=""><svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <a href="https://github.com/rdgr1" target="_blank"><svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     
             <title>github [#142]</title>
             <desc>Created with Sketch.</desc>
@@ -71,7 +83,7 @@
                 </g>
             </g>
         </svg></a>
-        <a href=""><svg fill="var(--white)" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <a href="https://www.linkedin.com/in/rodger-vd" target="_blank"><svg fill="var(--white)" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <title>linkedin</title>
             <path d="M28.778 1.004h-25.56c-0.008-0-0.017-0-0.027-0-1.199 0-2.172 0.964-2.186 2.159v25.672c0.014 1.196 0.987 2.161 2.186 2.161 0.010 0 0.019-0 0.029-0h25.555c0.008 0 0.018 0 0.028 0 1.2 0 2.175-0.963 2.194-2.159l0-0.002v-25.67c-0.019-1.197-0.994-2.161-2.195-2.161-0.010 0-0.019 0-0.029 0h0.001zM9.9 26.562h-4.454v-14.311h4.454zM7.674 10.293c-1.425 0-2.579-1.155-2.579-2.579s1.155-2.579 2.579-2.579c1.424 0 2.579 1.154 2.579 2.578v0c0 0.001 0 0.002 0 0.004 0 1.423-1.154 2.577-2.577 2.577-0.001 0-0.002 0-0.003 0h0zM26.556 26.562h-4.441v-6.959c0-1.66-0.034-3.795-2.314-3.795-2.316 0-2.669 1.806-2.669 3.673v7.082h-4.441v-14.311h4.266v1.951h0.058c0.828-1.395 2.326-2.315 4.039-2.315 0.061 0 0.121 0.001 0.181 0.003l-0.009-0c4.5 0 5.332 2.962 5.332 6.817v7.855z"></path>
             </svg></a>

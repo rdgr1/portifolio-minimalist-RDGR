@@ -7,72 +7,94 @@
     height: 328px;
     background-color: var(--white);
     border-radius: 22px;
-    gap: 16px; /* Ajuste para manter espaçamento controlado */
+    margin: 0;
+    padding: 0;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative; /* Necessário para posicionar o conteúdo absoluto */
-    overflow: hidden; /* Evita que o conteúdo extrapole */
-    transition: all 0.3s ease; /* Transição suave no hover */
-}
-
-.container-card:hover {
-    background: none;
-    background-color: var(--white);
-}
-
-/* Seção de texto (título e descrição) */
-.minify-projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    text-align: center;
-    color: var(--black);
-    transition: opacity 0.3s ease;
-    padding: 8px;
-    max-width: 90%; /* Ajuste para evitar overflow */
-    word-wrap: break-word; /* Garante que palavras longas sejam quebradas */
-    white-space: normal; /* Permite que o texto quebre automaticamente */ /* Espaço interno para evitar que o texto toque as bordas */
-    h2{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid var(--white);
+    /* Adiciona overlay branco e blur quando hover */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0); /* Começa transparente */
+      backdrop-filter: blur(0px);
+      transition: backdrop-filter 0.3s ease, background 0.3s ease;
+    }
+  
+    /* Quando hover, a sobreposição aparece */
+    &.hovered::after {
+      background: rgba(255, 255, 255, 0.6); /* Esbranquiçado */
+      backdrop-filter: blur(8px); /* Efeito de desfoque */
+    }
+  
+    /* Minify-projects começa invisível */
+    .minify-projects {
+      width: 180px;
+      height: 245px;
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      text-align: center;
+      color: var(--white);
+      padding: 8px;
+      max-width: 90%;
+      white-space: normal;
+      z-index: 2; /* Mantém acima do overlay */
+  
+      h2 {
         font-size: 20px;
-        max-width: 90%; /* Ajuste para evitar overflow */
-        word-wrap: normal; /* Garante quebra de palavras */
-        white-space: normal; 
-    }
-    p{
+        word-wrap: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        margin-top: 17px;
+        color: var(--white);
+      }
+      p {
+        margin-top: 17px;
         font-size: 16px;
-        max-width: 90%; /* Define largura máxima para evitar estouro */
-        word-wrap: break-word; 
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: center;
+        max-width: 100%;
         white-space: normal;
+      }
     }
-}
-
-.container-card:hover .minify-projects {
-    opacity: 1; /* Mostra o conteúdo no hover */
-}
-
-/* Links de ícones */
-.links-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 25px; /* Mantém espaçamento fixo entre ícones */
-    position: absolute; /* Posiciona na parte inferior do card */
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    word-wrap: break-word; /* Evita quebra inesperada de texto */
-    overflow-wrap: break-word;
-}
-
-.links-container img {
-    width: 45px; /* Define tamanho fixo dos ícones */
-    object-fit: contain;
-}
+  
+    /* Exibe minify-projects apenas no card hoverado */
+    &.hovered .minify-projects {
+      opacity: 1;
+    }
+  
+    /* Mantém os links na posição correta */
+    .links-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2; /* Mantém os links acima do overlay */
+    }
+  
+    .links-container img {
+      width: 45px;
+      object-fit: contain;
+    }
+  }
+  

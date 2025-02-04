@@ -3,6 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .header{
+        margin-bottom: 25px;
+    }
     h1{
         margin: 50px;
         font-weight: 600;
@@ -21,6 +24,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        margin-top: 35px;
         .social-links{
             display: flex;
             position: absolute;

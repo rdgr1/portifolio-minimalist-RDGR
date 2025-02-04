@@ -1,10 +1,21 @@
 .container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type:y mandatory;
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     transition: 0.7s ease-in-out;
+      /* Esconde a barra de scroll */
+    -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+    }
+
 
     .navbar {
         position: absolute;
@@ -20,8 +31,10 @@
     }
 
     .button-dark-mode {
-        padding-top: 43px;
-        position: relative;
-        left: 800px;
+        position: absolute;
+        top: 50px;
+        right: 5px; /* Ajuste conforme necessário */
+        z-index: 1000; /* Garante que fique acima de outros elementos */
+        cursor: pointer;
     }
 }
