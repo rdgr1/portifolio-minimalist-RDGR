@@ -7,7 +7,7 @@ import { ContatoResponse } from '../types/contato-response.type';
   providedIn: 'root'
 })
 export class EmailService {
-  private apiUrl: string = "https://contato-spring-back-end-portifolio.onrender.com:8080/api/emails/send";
+  private apiUrl: string = "https://contato-spring-back-end-portifolio.onrender.com/api/emails/send";
 
   constructor(private httpClient: HttpClient) {}
 
