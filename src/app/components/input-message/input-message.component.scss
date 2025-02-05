@@ -1,33 +1,37 @@
-.input-wrapper{
+.input-wrapper {
     margin-bottom: 25px;
-    label{
+  }
+  
+  label {
     font-size: 20px;
     color: var(--white);
     font-weight: 100;
-    }
-    input{
-        width: 100%;
-        border: 1.5px solid var(--white);
-        border-radius: 12px;
-        font-size: 16px;
-        padding: 20px 0 70px 20px;
-        background-color: transparent;
-        color: var(--white);
-        outline: none;
-        margin: 10px 12px 0 0;
-        font-weight: 200;
-        word-wrap: break-word;
-        &:valid:not(:placeholder-shown), &:invalid:not(:placeholder-shown){
-            background-repeat: no-repeat;
-            background-position: calc(100% - 10px);
-            background-size: 25px;
-        }
-        &:invalid:not(:placeholder-shown){
-            border: 2px solid #ff4949;
-            background-image: url(/assets/imgs/png/unchecked-mark.png);
-        }
-        &:valid:not(:placeholder-shown){
-            background-image: url(/assets/imgs/png/checked-mark.png);
-        }
-    }
-}
+  }
+  
+  .input-content {
+    width: 100%;
+  }
+  
+  input, textarea {
+    width: 100%;
+    border: 1.5px solid var(--white);
+    border-radius: 12px;
+    font-size: 16px;
+    padding: 20px;
+    background-color: transparent;
+    color: var(--white);
+    outline: none;
+    margin-top: 10px;
+    font-weight: 200;
+  
+    /* Permitir quebra de linha */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  textarea {
+    height: 150px; /* Definir uma altura maior para o textarea */
+    resize: vertical; /* Permitir que o usuário redimensione o campo */
+    white-space: pre-wrap; /* Manter quebras de linha */
+  }
+  

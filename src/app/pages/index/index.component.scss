@@ -15,8 +15,6 @@
     &::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
     }
-
-
     .navbar {
         position: absolute;
         min-width: 200px;  /* Define um tamanho mínimo */
@@ -36,5 +34,8 @@
         right: 5px; /* Ajuste conforme necessário */
         z-index: 1000; /* Garante que fique acima de outros elementos */
         cursor: pointer;
+    }
+    @media (max) {
+        
     }
 }
