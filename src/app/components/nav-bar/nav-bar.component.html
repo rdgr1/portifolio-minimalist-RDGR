@@ -1,35 +1,35 @@
-<nav>
+<nav [ngClass]="{'mobile-nav': screenWidth <= 768, 'nav-open': isMenuOpen}">
   <div class="container-navbar">
-    <ul class="navbar-nav">
+    <!-- Botão de menu hamburguer (só aparece em telas pequenas) -->
+    <button class="menu-toggle" (click)="toggleMenu()" *ngIf="screenWidth <= 768">☰</button>
+
+    <!-- Menu de navegação -->
+    <ul class="navbar-nav" [class.show]="isMenuOpen">
       <li class="nav-item">
-        <a class="nav-link"
-           [ngClass]="{'active': activeLink === 'inicio'}"
-           (click)="scrollToSection('inicio')">
+        <a class="nav-link" [ngClass]="{'active': activeLink === 'inicio'}" (click)="scrollToSection('inicio')">
           Início
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"
-           [ngClass]="{'active': activeLink === 'sobre'}"
-           (click)="scrollToSection('sobre')">
+        <a class="nav-link" [ngClass]="{'active': activeLink === 'sobre'}" (click)="scrollToSection('sobre')">
           Sobre Mim
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"
-           [ngClass]="{'active': activeLink === 'projetos'}"
-           (click)="scrollToSection('projetos')">
+        <a class="nav-link" [ngClass]="{'active': activeLink === 'projetos'}" (click)="scrollToSection('projetos')">
           Projetos
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"
-           [ngClass]="{'active': activeLink === 'formulario'}"
-           (click)="scrollToSection('formulario')">
+        <a class="nav-link" [ngClass]="{'active': activeLink === 'formulario'}" (click)="scrollToSection('formulario')">
           Contato
         </a>
       </li>
     </ul>
-    <span><a href="/assets/imgs/pdfs/curriculo" target="_blank" class="buttom-resumo">Resumo</a></span>
+
+    <!-- O botão "Resumo" agora some quando o menu é aberto -->
+    <span *ngIf="screenWidth > 768 || !isMenuOpen">
+      <a href="/assets/imgs/pdfs/curriculo" target="_blank" class="buttom-resumo">Resumo</a>
+    </span>
   </div>
 </nav>

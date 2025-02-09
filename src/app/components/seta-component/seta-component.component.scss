@@ -4,8 +4,7 @@ button{
     cursor: pointer;
     svg{
       fill: var(--white);
-      width: 65px;
-      height: 65px;
+      height: clamp(20px, 10vw,65px);
     }
     &:hover{
         animation: float 1s infinite ease-in-out;

@@ -7,11 +7,12 @@ header {
     background-color: var(--black);
     padding-bottom: 35px;
     position: relative;
-    gap: 20px; /* Define um contexto para posicionamento */
+    gap: clamp(5px,2vw,20px); /* Define um contexto para posicionamento */
+    min-height: 15vh;
     h1 {
         font-family: 'SF-pro';
         font-weight: 650;
-        font-size: 115px;
+        font-size: clamp(2rem,10vw,115px);
         position: relative;
         z-index: 1;
         text-align: center; /* Garante que fique centralizado */
@@ -22,27 +23,32 @@ header {
         flex-direction: column;
         align-items: center;
         font-family: 'SF-pro';
-        font-size: 48px;
+        font-size: clamp(1.5rem,7vw,48px);
         font-weight: 200;
-        padding-top: 20px;
-        margin-top: 55px; /* Ajuste para garantir espaçamento abaixo do título */
-        margin-left: -20px;
-        /* Evita o uso de `position: absolute`, centralizando naturalmente */
-        .icons-container {
+        padding: 10px 0px 0px 0px;
             display: flex;
             gap: 10px; /* Espaçamento entre os ícones */
             margin-top: 10px;
         }
-
-        .icons-container img {
-            width: 50px; /* Define um tamanho adequado para os ícones */
+        .icons-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .icons-container img, .icons-container svg {
+            width: clamp(30px,4w,60px); 
             height: auto;
             padding: 5px;
+            transition: all 0.9s ease-in-out;
         }
         .icons-container svg {
             fill: var(--white);
-            width: 50px;
-            height: 60px;
         }
-    }    
-}
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 15px;
+        }
+}    
+
