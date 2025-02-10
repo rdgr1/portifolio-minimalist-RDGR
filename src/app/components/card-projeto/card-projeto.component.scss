@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 224px;
-    height: 328px;
+    width: clamp(100px,20vw,224px);
+    height: clamp(120px,10vw,328px);
     background-color: var(--white);
     border-radius: 22px;
     margin: 0;
@@ -95,6 +95,9 @@
     .links-container img {
       width: 45px;
       object-fit: contain;
+    }
+    @media (max-width: 768px) {
+      
     }
   }
   
