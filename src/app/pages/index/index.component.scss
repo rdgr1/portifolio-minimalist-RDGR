@@ -1,74 +1,26 @@
 .container {
-    height: 100vh;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     position: relative;
-    transition: transform 0.7s ease-in-out;
-    gap: clamp(15px, 5vw, 50px); 
-    /* Esconde a barra de scroll */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    
-    &::-webkit-scrollbar {
-        display: none; /* Chrome, Safari e Opera */
+    gap: clamp(20px, 10vw,200px);
+    .header-index{
+        margin-top: 200px;
     }
-
-    .navbar {
+    .button-dark-mode{
         position: absolute;
-        min-width: clamp(150px, 20vw, 200px);  /* Tamanho responsivo */
-        height: 50px;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        transition: opacity 0.3s ease-in-out;
-        margin-right: 10px;
+        right: 10%;
+        top: 10%;
     }
-
-    .header-index {
-        padding: clamp(20px, 5vw, 100px);
-    }
-
-    .button-dark-mode {
-        position: fixed; // 🔹 Mantém fixo e evita ultrapassar a navbar
-        top: clamp(10px, 2vw, 30px); // 🔹 Ajusta dinamicamente o espaçamento do topo
-        right: clamp(10px, 3vw, 50px); // 🔹 Mantém distância correta da borda direita
-        z-index: 1100; // 🔹 Garante que fique acima da navbar
-        cursor: pointer;
-    }
-    
-
-    .scroll-arrow {
-        position: fixed;
-        bottom: 20px;
-        cursor: pointer;
-        animation: bounce 1.5s infinite ease-in-out;
-    }
-
-    @keyframes bounce {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .button-dark-mode{
-            display: none;
-        }
-        .navbar {
-            min-width: 100%;
-            top: 5px;
-        }
-        .header-index {
-            padding: 50px;
-            text-align: center;
-        }
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 67px;
+        position: absolute;
+        top: 5%;
     }
 }

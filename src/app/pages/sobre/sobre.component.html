@@ -1,7 +1,9 @@
 <div class="container">
     <app-nav-bar></app-nav-bar>
     <app-sobre-mim></app-sobre-mim>
-    <app-seta-component
-    (navigate)="scrollToSection('projetos')"
-    ></app-seta-component>
+    <div class="seta-navigate">
+        <app-seta-component
+        (click)="navigateTo()"
+        ></app-seta-component>
+    </div>
 </div>

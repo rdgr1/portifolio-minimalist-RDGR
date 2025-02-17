@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: clamp(100px,20vw,224px);
-    height: clamp(120px,10vw,328px);
+    width: 224px;
+    height: 328px;
     background-color: var(--white);
     border-radius: 22px;
     margin: 0;
@@ -46,7 +46,7 @@
       opacity: 0;
       transition: opacity 0.3s ease;
       text-align: center;
-      color: var(--white);
+      color: black;
       padding: 8px;
       max-width: 90%;
       white-space: normal;

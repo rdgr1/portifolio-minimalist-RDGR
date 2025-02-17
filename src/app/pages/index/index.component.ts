@@ -17,11 +17,14 @@ export class IndexComponent {
   isScrolled: boolean = false;
   isDarkMode: boolean = false;
   isHovered: boolean = false;
-  constructor(){}
+  constructor(private router : Router){}
   toggleDarkMode(): void{
     this.isDarkMode = !this.isDarkMode;
   }
-  scrollToSection(sectionId: string):void{
-    document.getElementById(sectionId)?.scrollIntoView({behavior:'smooth'});
+  navigateTo(){
+    this.router.navigate(['sobre'])
+  }
+  setHovered(state: boolean): void {
+    this.isHovered = state;
   }
 }

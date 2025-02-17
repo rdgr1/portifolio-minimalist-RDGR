@@ -1,34 +1,41 @@
-<nav [ngClass]="{'mobile-nav': screenWidth <= 768, 'nav-open': isMenuOpen}">
+<nav [class.hidden]="isInProjectSection">
   <div class="container-navbar">
-    <!-- Botão de menu hamburguer (só aparece em telas pequenas) -->
-    <button class="menu-toggle" (click)="toggleMenu()" *ngIf="screenWidth <= 768">☰</button>
-
-    <!-- Menu de navegação -->
-    <ul class="navbar-nav" [class.show]="isMenuOpen">
+    <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': activeLink === 'inicio'}" (click)="scrollToSection('inicio')">
-          Início
+        <a class="nav-link"
+        routerLink="/index"
+        [routerLinkActive]="'active'"
+        (click)="setActiveLink('inicio')">
+        Início
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': activeLink === 'sobre'}" (click)="scrollToSection('sobre')">
+        <a class="nav-link"
+        routerLink="/sobre"
+        [routerLinkActive]="'active'"
+        (click)="setActiveLink('sobre')">
           Sobre Mim
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': activeLink === 'projetos'}" (click)="scrollToSection('projetos')">
+        <a class="nav-link"
+        routerLink="/projetos"
+        [routerLinkActive]="'active'"
+        (click)="setActiveLink('projetos')">
           Projetos
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': activeLink === 'formulario'}" (click)="scrollToSection('formulario')">
+        <a class="nav-link"
+        routerLink="/contato"
+        [routerLinkActive]="'active'"
+        (click)="setActiveLink('contato')">
           Contato
         </a>
       </li>
     </ul>
-
     <!-- O botão "Resumo" agora some quando o menu é aberto -->
-    <span *ngIf="screenWidth > 768 || !isMenuOpen">
+    <span>
       <a href="/assets/imgs/pdfs/curriculo" target="_blank" class="buttom-resumo">Resumo</a>
     </span>
   </div>

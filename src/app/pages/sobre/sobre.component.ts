@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SobreMimComponent } from "../../components/sobre-mim/sobre-mim.component";
 import { NavBarComponent } from "../../components/nav-bar/nav-bar.component";
 import { SetaComponentComponent } from "../../components/seta-component/seta-component.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sobre',
@@ -11,8 +12,8 @@ import { SetaComponentComponent } from "../../components/seta-component/seta-com
   styleUrl: './sobre.component.scss'
 })
 export class SobreComponent {
-  constructor(){}
-  scrollToSection(sectionId: string):void{
-    document.getElementById(sectionId)?.scrollIntoView({behavior:'smooth'});
-  }
+  constructor(private router : Router){}
+navigateTo(){
+  this.router.navigate(['projetos'])
+}
 }

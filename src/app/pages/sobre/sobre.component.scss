@@ -1,27 +1,7 @@
 .container {
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: clamp(10px,2vw,20px);
-    min-height: 100vh;
-    padding: clamp(20px,5vw,60px);
-
-    app-nav-bar {
-        width: 100%;
-        max-width: 640px;
-    }
-    app-sobre-mim {
-        width: 100%;
-        max-width: 1000px;
-    }
-    app-seta-component{
-        margin-top: auto;
-        cursor: pointer
-    }
-
-    @media (max-width: 768px) {
-        gap: 15px;
-        padding: 20px;
-    }
 }

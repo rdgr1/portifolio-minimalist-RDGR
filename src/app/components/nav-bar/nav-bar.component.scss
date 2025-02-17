@@ -2,43 +2,45 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 900px;
+    height: 65px;
+    border-radius: 22px;
+    background-color: var(--white);
     margin: 20px;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; // Suaviza a animação
-    overflow: hidden;
+
     .container-navbar {
-        padding: 0px 10px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        height: clamp(45px,5vw,65px);
-        border-radius: 22px;
+        width: 100%;
+
         ul {
             display: flex;
-            gap: clamp(25px,5vw,50px);
+            gap: 50px;
             list-style: none;
             font-weight: 600;
-            font-size: clamp(1rem,3.5vw,18px);
-            margin-left: 15px;
+            font-size: 18px;
+            padding-left: 50px;
+            background-color: var(--white);
         }
+
         .nav-item {
-            nav .container-navbar{
-                background-color: transparent !important;
-            }
             position: relative;
+
             .nav-link {
-                word-wrap: normal;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                font-size: clamp(1rem,3vw,18px);
                 text-decoration: none;
                 color: var(--black);
                 transition: color 0.3s ease;
+                background-color: var(--white);
                 cursor: pointer;
+
                 &:hover {
                     color: #b9b9b9;
                 }
-               /* &.active::after {
+
+               &.active::after {
                     content: '';
                     position: absolute;
                     left: 50%;
@@ -50,86 +52,31 @@ nav {
                     transition: width 0.3s ease;
                     transform: translateX(-50%);
                 }
-                    */
             }
         }
         span{
-            flex-shrink: 0;
-            max-width: 100%;
             margin-right: 10px;
         }
         .buttom-resumo {
             text-decoration: none;
             font-weight: 600;
             color: var(--white);
-            padding: clamp(5px, 1vw, 15px) clamp(10px, 3vw, 30px);
+            padding: 10px 20px 10px 20px;
             background-color: var(--black);
             margin-left: 35px;
-            font-size: clamp(1rem,2vw,19px);
+            font-size: 19px;
             border-radius: 12px;
 
             &:hover {
-                border:var(--black) solid 2px;
                 transition: background 0.5s ease-in-out;
                 padding: 10px 18px 10px 18px;
                 background-color: transparent;
+                border:var(--black) solid 2px;
                 color: var(--black);
             }
         }
     }
-    @media (min-width: 768px){
-        .container-navbar {
-            background-color: var(--white) !important;
-        }
-    }
-    @media (max-width: 768px) {
-        .container-navbar {
-            background-color: transparent !important;
-        }
-        .navbar-nav {
-          display: none; // ✅ Começa escondido corretamente
-          opacity: 0;
-          transform: translateY(-10px);
-          flex-direction: column;
-          background-color: var(--white);
-          gap: 15px;
-          width: 90%;
-          padding: 10px;
-          border-radius: 10px;
-          position: absolute;
-          top: 60px;
-          left: 0;
-          right: 0;
-          z-index: 999;
-          &:not(:hover){
-            display: none;
-          }
-        }
-      
-        .navbar-nav.show {
-            display: flex !important;
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-          }
-        .menu-toggle {
-          display: block !important; // ✅ Garante que o botão aparece
-          font-size: clamp(1.5rem,5vw,3rem);
-          cursor: pointer;
-          background: none;
-          border: none;
-          color: var(--white);
-          position: absolute;
-          top: 10px;
-          right: 20px;
-          z-index: 1000;
-        }
-        .buttom-resumo {
-          display: none !important; // ✅ Esconde o botão "Resumo" quando o menu está aberto
-        }
-      }            
 }
-
 
 // **⏳ Esconde a navbar quando a rota for "/projetos"**
 .hidden {
