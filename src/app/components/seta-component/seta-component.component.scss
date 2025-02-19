@@ -5,6 +5,7 @@ button{
     svg{
       fill: var(--white);
       height: clamp(20px, 10vw,65px);
+      transition: all 0.9s ease-in-out;
     }
     &:hover{
         animation: float 1s infinite ease-in-out;

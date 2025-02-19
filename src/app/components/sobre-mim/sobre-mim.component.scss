@@ -18,11 +18,13 @@
             font-size: clamp(12px,5vw,32px);
             text-align: center;
             padding-bottom: 24px;
+            transition: all 0.9s ease-in-out;
            }
            p{
             font-weight: 200;
             font-size: clamp(7px,3vw,20px);
             text-align: center  ;
+            transition: all 0.9s ease-in-out;
            }
            .personal-pic{
             img{

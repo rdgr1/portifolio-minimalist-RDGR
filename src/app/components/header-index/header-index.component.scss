@@ -17,6 +17,7 @@ header {
         z-index: 1;
         text-align: center; /* Garante que fique centralizado */
         margin: 0; /* Remove margem lateral fixa */
+        transition: all 0.9s ease-in-out;
     }
     .subtitle-container {
         display: flex;
@@ -29,6 +30,7 @@ header {
             display: flex;
             gap: 10px; /* Espaçamento entre os ícones */
             margin-top: 10px;
+        transition: all 0.9s ease-in-out;
         }
         .icons-container {
             display: flex;
@@ -41,14 +43,17 @@ header {
             padding: 5px;
             transition: all 0.9s ease-in-out;
         }
-        .icons-container svg {
+         .icons-container svg {
             fill: var(--white);
         }
         @media (max-width: 768px) {
-            flex-direction: column;
+            position: relative;
+           flex-direction: column;
             align-items: center;
             padding: 20px;
             gap: 15px;
+            z-index: 1;
+            
         }
 }    
 

@@ -5,6 +5,9 @@
     align-items: center;
     .header{
         margin-bottom: 25px;
+        h1, app-nav-bar {
+            transition: all 0.9s ease-in-out;
+        }
     }
     h1{
         margin: 50px;
