@@ -5,6 +5,7 @@
     (mouseleave)="isHovered = false"
     >
       <app-nav-bar
+      *ngIf="isHovered"
       ></app-nav-bar>
     </div>
     <div class="button-dark-mode" (click)="toggleDarkMode()">
