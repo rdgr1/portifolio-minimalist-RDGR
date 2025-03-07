@@ -1,43 +1,121 @@
-.project-container{
+.project-container {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .header{
+    position: relative;
+
+    .header {
         margin-bottom: 25px;
         h1, app-nav-bar {
             transition: all 0.9s ease-in-out;
         }
     }
-    h1{
+
+    h1 {
         margin: 50px;
         font-weight: 600;
         font-size: 36px;
+        text-align: center;
     }
-    .container-cards{
-        display: flex;
-        flex-direction: row;
-        justify-self: center;
-        align-items: center;
+
+    /* 📌 Novo Grid Desktop: 2 colunas verticais */
+    .container-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 🔹 Duas colunas */
+        grid-auto-flow: row; /* 🔹 Preenche os itens em colunas */
         gap: 17px;
         margin-bottom: 21px;
+        width: 80%; /* 🔹 Mantém um layout organizado */
+        max-width: 900px;
     }
-    .footer{
+
+    /* ✅ Ajuste no Card para garantir que os textos não sejam cortados */
+    .container-card {
+        width: 100%;
+        height: auto; /* Ajusta a altura automaticamente */
+        min-height: 350px; /* Evita cortes no conteúdo */
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        border-radius: 12px;
+    }
+
+    /* 📌 Carrossel apenas para Mobile */
+    .carousel {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .aviso {
+            position: absolute;
+            top: 22%;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        .carousel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: 45px;
+        }
+
+        /* 📌 Ajuste no tamanho do texto para não cortar */
+        .container-card {
+            width: 100%;
+            min-height: 400px; /* 🔹 Aumentamos a altura */
+            padding: 20px;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+        .carousel-btn {
+            background: none;
+            border: none;
+            font-size: 30px;
+            font-weight: 100;
+            cursor: pointer;
+            padding: 10px;
+            color: var(--white);
+            transition: 0.3s;
+            margin: 30px;
+        }
+    }
+
+    .footer {
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
         margin-top: 5px;
-        .social-links{
+
+        .social-links {
             display: flex;
             position: absolute;
             left: 700px;
             gap: 18px;
-            a svg{
+
+            a svg {
                 width: 45px;
                 height: 45px;
             }
         }
     }
-
 }

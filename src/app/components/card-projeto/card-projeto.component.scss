@@ -1,103 +1,108 @@
 .container-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 224px;
-    height: 328px;
-    background-color: var(--white);
-    border-radius: 22px;
-    margin: 0;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border: 2px solid var(--white);
-    /* Adiciona overlay branco e blur quando hover */
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0); /* Começa transparente */
-      backdrop-filter: blur(0px);
-      transition: backdrop-filter 0.3s ease, background 0.3s ease;
-    }
-  
-    /* Quando hover, a sobreposição aparece */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 224px;
+  height: 328px;
+  background-color: var(--white);
+  border-radius: 22px;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid var(--white);
+
+  /* Mantém overlay apenas para desktop */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter 0.3s ease, background 0.3s ease;
+  }
+
+  /* 📌 No Desktop, Hover ativa a descrição */
+  @media (min-width: 769px) {
     &.hovered::after {
-      background: rgba(255, 255, 255, 0.6); /* Esbranquiçado */
-      backdrop-filter: blur(8px); /* Efeito de desfoque */
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
     }
-  
-    /* Minify-projects começa invisível */
-    .minify-projects {
-      width: 180px;
-      height: 245px;
-      position: absolute;
-      top: 38%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      text-align: center;
-      color: black;
-      padding: 8px;
-      max-width: 90%;
-      white-space: normal;
-      z-index: 2; /* Mantém acima do overlay */
-  
-      h2 {
-        font-size: 20px;
-        word-wrap: normal;
-        white-space: normal;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 100%;
-        margin-top: 17px;
-        color: black;
-      }
-      p {
-        margin-top: 17px;
-        font-size: 16px;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        text-align: center;
-        max-width: 100%;
-        white-space: normal;
-      }
-    }
-  
-    /* Exibe minify-projects apenas no card hoverado */
+
     &.hovered .minify-projects {
       opacity: 1;
     }
-  
-    /* Mantém os links na posição correta */
-    .links-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 25px;
-      position: absolute;
-      bottom: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2; /* Mantém os links acima do overlay */
+  }
+
+  /* 📌 No Mobile, exibir apenas ao clicar */
+  @media (max-width: 768px) {
+    &.active::after {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      border-radius: 15px;
     }
-  
-    .links-container img {
-      width: 45px;
-      object-fit: contain;
-    }
-    @media (max-width: 768px) {
-      
+
+    &.active .minify-projects {
+      opacity: 1;
     }
   }
-  
+
+  .minify-projects {
+    width: 180px;
+    height: 245px;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* 🔹 Desktop começa invisível */
+    text-align: center;
+    color: black;
+    padding: 8px;
+    max-width: 90%;
+    white-space: normal;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+
+    h2 {
+      font-size: 20px;
+      max-width: 100%;
+      margin-top: 17px;
+      color: black;
+    }
+
+    p {
+      margin-top: 17px;
+      font-size: 16px;
+      text-align: center;
+      max-width: 100%;
+      white-space: normal;
+    }
+  }
+
+  /* Mantém os links na posição correta */
+  .links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .links-container img {
+    width: 45px;
+    object-fit: contain;
+  }
+}

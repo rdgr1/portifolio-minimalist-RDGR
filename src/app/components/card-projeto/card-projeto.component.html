@@ -1,9 +1,11 @@
-<div class="container-card" 
-     [ngStyle]="{'background-image': 'url(' + linkImg + ')'}" 
-     (mouseenter)="isHovered = true"
-     (mouseleave)="isHovered = false"
-     [class.hovered]="isHovered">
-  
+<div class="container-card"
+     [ngStyle]="{'background-image': 'url(' + linkImg + ')'}"
+     (mouseenter)="onMouseEnter()"
+     (mouseleave)="onMouseLeave()"
+     [class.hovered]="isHovered"
+     [class.active]="isMobileActive"
+     (click)="toggleMobileDescription($event)">
+
     <div class="minify-projects">
         <h2>{{ title }}</h2>
         <p>{{ text }}</p>

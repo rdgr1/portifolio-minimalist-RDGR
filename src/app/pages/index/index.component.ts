@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { HeaderIndexComponent } from "../../components/header-index/header-index.component";
 import { SetaComponentComponent } from "../../components/seta-component/seta-component.component";
 import { ButtonDarkModeComponent } from "../../components/button-dark-mode/button-dark-mode.component";
@@ -9,22 +9,36 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-index',
   standalone: true,
-  imports: [HeaderIndexComponent, SetaComponentComponent, ButtonDarkModeComponent, NavBarComponent,CommonModule],
+  imports: [HeaderIndexComponent, SetaComponentComponent, ButtonDarkModeComponent, NavBarComponent, CommonModule],
   templateUrl: './index.component.html',
-  styleUrl: './index.component.scss'
+  styleUrls: ['./index.component.scss']
 })
 export class IndexComponent {
   isScrolled: boolean = false;
   isDarkMode: boolean = false;
   isHovered: boolean = false;
-  constructor(private router : Router){}
-  toggleDarkMode(): void{
+  isMobile: boolean = window.innerWidth <= 768; // 🔹 Define se é mobile ou desktop
+
+  constructor(private router: Router) {}
+
+  toggleDarkMode(): void {
     this.isDarkMode = !this.isDarkMode;
   }
-  navigateTo(){
-    this.router.navigate(['sobre'])
+
+  navigateTo() {
+    this.router.navigate(['sobre']);
   }
+
+  // 🔹 Aplica hover SOMENTE no desktop
   setHovered(state: boolean): void {
-    this.isHovered = state;
+    if (!this.isMobile) { 
+      this.isHovered = state;
+    }
+  }
+
+  // 🔹 Atualiza se é mobile ao redimensionar a tela
+  @HostListener('window:resize', [])
+  onResize() {
+    this.isMobile = window.innerWidth <= 768;
   }
 }
