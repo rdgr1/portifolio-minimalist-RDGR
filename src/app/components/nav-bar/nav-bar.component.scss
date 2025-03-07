@@ -120,8 +120,8 @@ nav {
         .btn-mobile {
             display: block; // Mostra o botão no mobile
             position: absolute;
-            top: 40%;
-            left: 17%;
+            top: 5%;
+            left: 2%;
             svg {
                 path 
                 {fill: var(--white);
@@ -165,7 +165,6 @@ nav {
                 left: 2%;
             }
         }
-
         .container-navbar.active {
             display: flex;
             transition: all 0.9s ease-in-out;
