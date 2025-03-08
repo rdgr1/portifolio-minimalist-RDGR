@@ -3,6 +3,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild, Inject, PLATFORM_ID } 
 
 @Component({
     selector: 'app-carrousel-layout',
+    standalone: true,
     imports: [CommonModule],
     templateUrl: './carrousel-layout.component.html',
     styleUrl: './carrousel-layout.component.scss'

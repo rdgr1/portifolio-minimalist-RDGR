@@ -8,6 +8,7 @@ import { InputMessageComponent } from '../input-message/input-message.component'
 
 @Component({
     selector: 'app-formulario-layout',
+    standalone: true,
     imports: [InputFormularioComponent, ReactiveFormsModule, InputMessageComponent, CommonModule],
     templateUrl: './formulario-layout.component.html',
     styleUrl: './formulario-layout.component.scss'

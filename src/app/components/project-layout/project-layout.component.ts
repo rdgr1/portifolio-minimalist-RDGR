@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-project-layout',
+    standalone: true,
     imports: [CardProjetoComponent, SetaComponentComponent, NavBarComponent, CommonModule],
     templateUrl: './project-layout.component.html',
     styleUrls: ['./project-layout.component.scss']

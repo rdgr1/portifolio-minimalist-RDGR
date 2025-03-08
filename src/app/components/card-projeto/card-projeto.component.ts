@@ -3,6 +3,7 @@ import { Component, Input, HostListener } from '@angular/core';
 
 @Component({
     selector: 'app-card-projeto',
+    standalone: true,
     imports: [CommonModule],
     templateUrl: './card-projeto.component.html',
     styleUrls: ['./card-projeto.component.scss']

@@ -5,6 +5,7 @@ import { isPlatformBrowser } from '@angular/common';
 
 @Component({
     selector: 'app-nav-bar',
+    standalone: true,
     imports: [CommonModule, RouterModule],
     templateUrl: './nav-bar.component.html',
     styleUrls: ['./nav-bar.component.scss'],

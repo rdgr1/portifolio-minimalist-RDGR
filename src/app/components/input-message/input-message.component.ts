@@ -4,6 +4,7 @@ import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, NgControlStatus, 
 
 @Component({
     selector: 'app-input-message',
+    standalone: true,
     imports: [ReactiveFormsModule, FormsModule, CommonModule], // Adicionado FormsModule
     providers: [{
             provide: NG_VALUE_ACCESSOR,

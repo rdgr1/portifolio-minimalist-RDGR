@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, AfterVie
 
 @Component({
     selector: 'app-button-dark-mode',
+    standalone: true,
     imports: [CommonModule],
     templateUrl: './button-dark-mode.component.html',
     styleUrls: ['./button-dark-mode.component.scss'],

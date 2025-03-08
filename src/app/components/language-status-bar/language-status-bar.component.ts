@@ -3,6 +3,7 @@ import { isPlatformBrowser } from '@angular/common';
 
 @Component({
     selector: 'app-language-status-bar',
+    standalone: true,
     imports: [],
     templateUrl: './language-status-bar.component.html',
     styleUrls: ['./language-status-bar.component.scss']

@@ -3,6 +3,7 @@ import { LanguageStatusBarComponent } from '../language-status-bar/language-stat
 
 @Component({
     selector: 'app-sobre-mim',
+    standalone: true,
     imports: [LanguageStatusBarComponent],
     templateUrl: './sobre-mim.component.html',
     styleUrl: './sobre-mim.component.scss'
