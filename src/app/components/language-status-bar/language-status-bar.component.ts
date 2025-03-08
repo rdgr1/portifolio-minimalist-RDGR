@@ -2,11 +2,10 @@ import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
-  selector: 'app-language-status-bar',
-  standalone: true,
-  imports: [],
-  templateUrl: './language-status-bar.component.html',
-  styleUrls: ['./language-status-bar.component.scss'],
+    selector: 'app-language-status-bar',
+    imports: [],
+    templateUrl: './language-status-bar.component.html',
+    styleUrls: ['./language-status-bar.component.scss']
 })
 export class LanguageStatusBarComponent implements OnInit {
   barLevels = [

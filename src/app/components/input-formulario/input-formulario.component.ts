@@ -3,16 +3,15 @@ import { ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR, Reacti
 
 type InputTypes = 'text' | 'email' | 'name'
 @Component({
-  selector: 'app-input-formulario',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  providers: [{
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => InputFormularioComponent),
-    multi: true,
-  }],
-  templateUrl: './input-formulario.component.html',
-  styleUrl: './input-formulario.component.scss'
+    selector: 'app-input-formulario',
+    imports: [ReactiveFormsModule],
+    providers: [{
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => InputFormularioComponent),
+            multi: true,
+        }],
+    templateUrl: './input-formulario.component.html',
+    styleUrl: './input-formulario.component.scss'
 })
 export class InputFormularioComponent implements ControlValueAccessor{
 @Input() type: InputTypes = 'text';

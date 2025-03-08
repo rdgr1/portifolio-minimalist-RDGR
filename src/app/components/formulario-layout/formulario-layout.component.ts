@@ -7,11 +7,10 @@ import { InputFormularioComponent } from "../input-formulario/input-formulario.c
 import { InputMessageComponent } from '../input-message/input-message.component';
 
 @Component({
-  selector: 'app-formulario-layout',
-  standalone: true,
-  imports: [InputFormularioComponent, ReactiveFormsModule, InputMessageComponent,CommonModule],
-  templateUrl: './formulario-layout.component.html',
-  styleUrl: './formulario-layout.component.scss'
+    selector: 'app-formulario-layout',
+    imports: [InputFormularioComponent, ReactiveFormsModule, InputMessageComponent, CommonModule],
+    templateUrl: './formulario-layout.component.html',
+    styleUrl: './formulario-layout.component.scss'
 })
 export class FormularioLayoutComponent implements OnInit {
   isDisabled = false;

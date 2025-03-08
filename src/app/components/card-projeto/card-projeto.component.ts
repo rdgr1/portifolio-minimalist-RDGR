@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-card-projeto',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './card-projeto.component.html',
-  styleUrls: ['./card-projeto.component.scss']
+    selector: 'app-card-projeto',
+    imports: [CommonModule],
+    templateUrl: './card-projeto.component.html',
+    styleUrls: ['./card-projeto.component.scss']
 })
 export class CardProjetoComponent {
   isHovered: boolean = false;

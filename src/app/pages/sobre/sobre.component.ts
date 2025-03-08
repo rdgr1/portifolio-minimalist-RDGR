@@ -5,11 +5,10 @@ import { SetaComponentComponent } from "../../components/seta-component/seta-com
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-sobre',
-  standalone: true,
-  imports: [SobreMimComponent, NavBarComponent, SetaComponentComponent],
-  templateUrl: './sobre.component.html',
-  styleUrl: './sobre.component.scss'
+    selector: 'app-sobre',
+    imports: [SobreMimComponent, NavBarComponent, SetaComponentComponent],
+    templateUrl: './sobre.component.html',
+    styleUrl: './sobre.component.scss'
 })
 export class SobreComponent {
   constructor(private router : Router){}
