@@ -23,7 +23,7 @@
     /* 📌 Novo Grid Desktop: 2 colunas verticais */
     .container-cards {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 🔹 Duas colunas */
+        grid-template-columns: repeat(4, 1fr); /* 🔹 Duas colunas */
         grid-auto-flow: row; /* 🔹 Preenche os itens em colunas */
         gap: 17px;
         margin-bottom: 21px;

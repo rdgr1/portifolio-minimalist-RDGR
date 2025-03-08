@@ -89,8 +89,8 @@ export class ProjectLayoutComponent {
   }
 
   // 🔹 Atualiza `isMobile` quando a tela for redimensionada
-  @HostListener('window:resize', [])
-  onResize() {
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
     this.isMobile = window.innerWidth <= 768;
   }
 }
