@@ -5,11 +5,10 @@ import { SetaComponentComponent } from "../../components/seta-component/seta-com
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-formulario',
-  standalone: true,
-  imports: [FormularioLayoutComponent, NavBarComponent, SetaComponentComponent],
-  templateUrl: './formulario.component.html',
-  styleUrl: './formulario.component.scss'
+    selector: 'app-formulario',
+    imports: [FormularioLayoutComponent, NavBarComponent, SetaComponentComponent],
+    templateUrl: './formulario.component.html',
+    styleUrl: './formulario.component.scss'
 })
 export class FormularioComponent {
 constructor(private router : Router){

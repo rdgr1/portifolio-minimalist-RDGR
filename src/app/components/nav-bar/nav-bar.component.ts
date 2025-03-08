@@ -4,12 +4,12 @@ import { RouterModule, Router } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
-  selector: 'app-nav-bar',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-nav-bar',
+    standalone: true,
+    imports: [CommonModule, RouterModule],
+    templateUrl: './nav-bar.component.html',
+    styleUrls: ['./nav-bar.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class NavBarComponent implements AfterViewInit, OnDestroy {
   @ViewChild('btnMobile', { static: false }) btnMobile!: ElementRef;

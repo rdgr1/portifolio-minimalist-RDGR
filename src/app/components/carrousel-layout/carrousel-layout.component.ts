@@ -2,11 +2,11 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, AfterViewInit, ElementRef, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
-  selector: 'app-carrousel-layout',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './carrousel-layout.component.html',
-  styleUrl: './carrousel-layout.component.scss'
+    selector: 'app-carrousel-layout',
+    standalone: true,
+    imports: [CommonModule],
+    templateUrl: './carrousel-layout.component.html',
+    styleUrl: './carrousel-layout.component.scss'
 })
 export class CarrouselLayoutComponent implements AfterViewInit {
   @ViewChild('slider') slider!: ElementRef;

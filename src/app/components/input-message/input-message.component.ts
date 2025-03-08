@@ -3,16 +3,16 @@ import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, NgControlStatus, ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-input-message',
-  standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, CommonModule], // Adicionado FormsModule
-  providers: [{
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => InputMessageComponent),
-      multi: true,
-    }],
-  templateUrl: './input-message.component.html',
-  styleUrl: './input-message.component.scss'
+    selector: 'app-input-message',
+    standalone: true,
+    imports: [ReactiveFormsModule, FormsModule, CommonModule], // Adicionado FormsModule
+    providers: [{
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => InputMessageComponent),
+            multi: true,
+        }],
+    templateUrl: './input-message.component.html',
+    styleUrl: './input-message.component.scss'
 })
 export class InputMessageComponent implements ControlValueAccessor {
   @Input() placeholder: string = '';

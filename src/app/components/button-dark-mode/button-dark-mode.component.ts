@@ -2,12 +2,12 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, AfterViewInit, PLATFORM_ID } from '@angular/core';
 
 @Component({
-  selector: 'app-button-dark-mode',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './button-dark-mode.component.html',
-  styleUrls: ['./button-dark-mode.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-button-dark-mode',
+    standalone: true,
+    imports: [CommonModule],
+    templateUrl: './button-dark-mode.component.html',
+    styleUrls: ['./button-dark-mode.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonDarkModeComponent implements AfterViewInit {
   isRendered: boolean = false;

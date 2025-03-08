@@ -7,11 +7,10 @@ import { NavBarComponent } from "../../components/nav-bar/nav-bar.component";
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-index',
-  standalone: true,
-  imports: [HeaderIndexComponent, SetaComponentComponent, ButtonDarkModeComponent, NavBarComponent, CommonModule],
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.scss']
+    selector: 'app-index',
+    imports: [HeaderIndexComponent, SetaComponentComponent, ButtonDarkModeComponent, NavBarComponent, CommonModule],
+    templateUrl: './index.component.html',
+    styleUrls: ['./index.component.scss']
 })
 export class IndexComponent {
   isScrolled: boolean = false;

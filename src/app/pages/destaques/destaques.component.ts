@@ -6,11 +6,10 @@ import { SliderLogoComponent } from "../../components/slider-logo/slider-logo.co
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-destaques',
-  standalone: true,
-  imports: [CarrouselLayoutComponent, NavBarComponent, SetaComponentComponent, SliderLogoComponent],
-  templateUrl: './destaques.component.html',
-  styleUrl: './destaques.component.scss'
+    selector: 'app-destaques',
+    imports: [CarrouselLayoutComponent, NavBarComponent, SetaComponentComponent, SliderLogoComponent],
+    templateUrl: './destaques.component.html',
+    styleUrl: './destaques.component.scss'
 })
 export class DestaquesComponent {
 constructor(private router: Router){}
