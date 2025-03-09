@@ -1,6 +1,21 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .container {
+    padding-right: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 75px 0px;
+    position: relative;
+  }
+  .seta-navigate {
+    position: absolute;
+    top: 101%;
+  }
 }

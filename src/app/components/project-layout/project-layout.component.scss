@@ -1,121 +1,156 @@
 .project-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  .header {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: relative;
+    h1,app-nav-bar {
+      transition: all 0.9s ease-in-out;
+    }
+  }
+
+  h1 {
+    margin: 35px;
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  /* 📌 Grid de Projetos - Agora ajustado para ir para a esquerda */
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 🔹 Padrão: 4 colunas */
+    grid-auto-flow: row;
+    gap: 17px;
+    margin-bottom: 21px;
+    width: 80%;
+    max-width: 1200px;
+
+    /* 🔹 Ajuste para telas menores que Full HD (MacBooks e Tablets grandes) */
+    @media (max-width: 1400px) {
+      grid-template-columns: repeat(4, 1fr); /* 🔹 3 colunas para MacBooks */
+      max-width: 1000px;
+      padding-right: 15px;
+    }
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 800px;
+      padding-left: 163px;
+      padding-bottom: 50px;
+    }
+  }
+  /* ✅ Ajuste no Card para evitar cortes de texto */
+  .container-card {
     width: 100%;
+    height: auto;
+    min-height: 350px;
+    padding: 15px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    position: relative;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+  }
 
+  /* 📌 Carrossel apenas para Mobile */
+  .carousel {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    .header {
+      margin-bottom: 25px;
+    }
+  }
+  @media (max-width: 1400px) {
     .header {
         margin-bottom: 25px;
-        h1, app-nav-bar {
-            transition: all 0.9s ease-in-out;
-        }
+    }
+  }
+  @media (min-width: 1400px) {
+    .header {
+        margin-bottom: 25px;
+        padding-left: 300px;
+    }
+  }
+  @media (max-width: 768px) {
+    .aviso {
+        left: 11%;
+        position: absolute;
+        top: 106%;
     }
 
-    h1 {
-        margin: 50px;
-        font-weight: 600;
-        font-size: 36px;
-        text-align: center;
+    .desktop {
+      display: none;
     }
 
-    /* 📌 Novo Grid Desktop: 2 colunas verticais */
-    .container-cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 🔹 Duas colunas */
-        grid-auto-flow: row; /* 🔹 Preenche os itens em colunas */
-        gap: 17px;
-        margin-bottom: 21px;
-        width: 80%; /* 🔹 Mantém um layout organizado */
-        max-width: 900px;
-    }
-
-    /* ✅ Ajuste no Card para garantir que os textos não sejam cortados */
-    .container-card {
-        width: 100%;
-        height: auto; /* Ajusta a altura automaticamente */
-        min-height: 350px; /* Evita cortes no conteúdo */
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        background-size: cover;
-        background-position: center;
-        border-radius: 12px;
-    }
-
-    /* 📌 Carrossel apenas para Mobile */
     .carousel {
-        display: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      padding-top: 67px;
     }
 
-    @media (max-width: 768px) {
-        .aviso {
-            position: absolute;
-            top: 22%;
-        }
-
-        .desktop {
-            display: none;
-        }
-
-        .carousel {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            width: 100%;
-            max-width: 320px;
-        }
-
-        .carousel-wrapper {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            padding-bottom: 45px;
-        }
-
-        /* 📌 Ajuste no tamanho do texto para não cortar */
-        .container-card {
-            width: 100%;
-            min-height: 400px; /* 🔹 Aumentamos a altura */
-            padding: 20px;
-            word-wrap: break-word;
-            white-space: normal;
-        }
-
-        .carousel-btn {
-            background: none;
-            border: none;
-            font-size: 30px;
-            font-weight: 100;
-            cursor: pointer;
-            padding: 10px;
-            color: var(--white);
-            transition: 0.3s;
-            margin: 30px;
-        }
+    .carousel-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding-bottom: 45px;
     }
 
-    .footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-top: 5px;
-
-        .social-links {
-            display: flex;
-            position: absolute;
-            left: 700px;
-            gap: 18px;
-
-            a svg {
-                width: 45px;
-                height: 45px;
-            }
-        }
+    /* 📌 Ajuste no tamanho do texto para não cortar */
+    .container-card {
+      width: 100%;
+      min-height: 400px; /* 🔹 Aumentamos a altura */
+      padding: 20px;
+      word-wrap: break-word;
+      white-space: normal;
     }
+
+    .carousel-btn {
+      background: none;
+      border: none;
+      font-size: 30px;
+      font-weight: 100;
+      cursor: pointer;
+      padding: 10px;
+      color: var(--white);
+      transition: 0.3s;
+      margin: 30px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 5px;
+
+    .social-links {
+      display: flex;
+      position: absolute;
+      left: 700px;
+      gap: 18px;
+
+      a svg {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
 }

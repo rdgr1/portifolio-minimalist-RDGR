@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-formulario',
+    standalone: true,
     imports: [FormularioLayoutComponent, NavBarComponent, SetaComponentComponent],
     templateUrl: './formulario.component.html',
     styleUrl: './formulario.component.scss'

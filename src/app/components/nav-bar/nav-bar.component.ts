@@ -1,7 +1,6 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, ViewEncapsulation, AfterViewInit, Inject, PLATFORM_ID, Renderer2, ElementRef, ViewChild, OnDestroy } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
-import { isPlatformBrowser } from '@angular/common';
 
 @Component({
     selector: 'app-nav-bar',
@@ -40,7 +39,9 @@ export class NavBarComponent implements AfterViewInit, OnDestroy {
 
   // ✅ Método para alternar o menu
   toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
+    if (this.isBrowser) {
+      this.isMenuOpen = !this.isMenuOpen;
+    }
   }
 
   // ✅ Método chamado após a renderização do HTML
