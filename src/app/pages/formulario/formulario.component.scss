@@ -1,26 +1,47 @@
-.container{
+.container {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .voltar-wrapper{
+    
+    .voltar-wrapper {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-top: 60px;
         position: relative;
-        .arrow-down{
+
+        .arrow-down {
             transform: rotate(540deg);
         }
-        .icons{
+
+        .icons {
             display: flex;
             justify-content: center;
             align-items: center;
-            left: 380px;
             position: absolute;
+            left: 380px;
             gap: 20px;
+        }
+    }
+}
+
+/* 🔹 Responsividade mínima para telas menores */
+@media (max-width: 768px) {
+    .container {
+        height: auto; // Evita que o conteúdo fique forçado a ocupar toda a altura
+        padding: 59px 0px; // Adiciona um pequeno espaçamento para evitar que os elementos fiquem grudados nas bordas
+
+        .voltar-wrapper {
+            margin-top: 30px; // Reduz espaço para melhor visualização
+            
+            .icons {
+                left: auto; // Remove posição fixa para se ajustar dinamicamente
+                position: static; // Previne sobreposição em telas pequenas
+                gap: 10px; // Reduz espaço entre ícones
+            }
         }
     }
 }

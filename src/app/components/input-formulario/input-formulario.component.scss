@@ -31,3 +31,21 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .input-wrapper {
+        margin-bottom: 15px; // Reduz espaço para melhor visualização
+    }
+
+    label {
+        font-size: 18px; // Reduz tamanho da fonte do label
+    }
+
+    input, textarea {
+        font-size: 14px; // Ajusta fonte para melhor encaixe
+        padding: 15px; // Reduz padding interno para melhor usabilidade
+    }
+
+    textarea {
+        height: 120px; // Reduz altura do textarea para não ocupar muito espaço em telas menores
+    }
+}

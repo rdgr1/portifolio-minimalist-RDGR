@@ -57,7 +57,7 @@
 
   .minify-projects {
     width: 180px;
-    height: 245px;
+    height: auto; // 🔹 Permite que o conteúdo expanda conforme necessário
     position: absolute;
     top: 38%;
     left: 50%;
@@ -65,28 +65,30 @@
     opacity: 0; /* 🔹 Desktop começa invisível */
     text-align: center;
     color: black;
-    padding: 8px;
+    padding: 12px; // 🔹 Mais espaço interno para evitar cortes
     max-width: 90%;
     white-space: normal;
+    word-wrap: break-word; // 🔹 Evita que palavras longas saiam do card
+    overflow-wrap: break-word;
     z-index: 2;
     transition: opacity 0.3s ease;
-
     h2 {
-      font-size: 20px;
-      max-width: 100%;
-      margin-top: 17px;
-      color: black;
+      font-size: 18px; // 🔹 Reduz um pouco o tamanho no mobile para encaixar melhor
+      margin-top: 10px; // 🔹 Ajusta o espaçamento para evitar cortes
+      word-wrap: break-word; // 🔹 Garante que palavras longas quebrem corretamente
+      overflow-wrap: break-word;
+      text-align: center; // 🔹 Centraliza melhor o título
     }
 
     p {
-      margin-top: 17px;
-      font-size: 16px;
-      text-align: center;
-      max-width: 100%;
-      white-space: normal;
+      font-size: 14px; // 🔹 Reduz tamanho para encaixar melhor no card
+      margin-top: 8px; // 🔹 Diminui espaçamento para evitar cortes
+      text-align: center; // 🔹 Mantém centralizado
+      line-height: 1.4; // 🔹 Melhora a legibilidade
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
   }
-
   /* Mantém os links na posição correta */
   .links-container {
     display: flex;
