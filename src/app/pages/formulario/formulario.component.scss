@@ -1,10 +1,10 @@
 .container {
-    height: 100vh;
+    min-height: 100vh; // 🔹 Permite crescimento conforme necessário
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: flex-start; // 🔹 Garante que a nav bar fique visível no topo
+
     .voltar-wrapper {
         display: flex;
         flex-direction: row;
@@ -31,16 +31,16 @@
 /* 🔹 Responsividade mínima para telas menores */
 @media (max-width: 768px) {
     .container {
-        height: auto; // Evita que o conteúdo fique forçado a ocupar toda a altura
-        padding: 59px 0px; // Adiciona um pequeno espaçamento para evitar que os elementos fiquem grudados nas bordas
+        min-height: auto; // 🔹 Permite crescimento conforme necessário
+        padding: 59px 0px; // 🔹 Mantém espaçamento para evitar sobreposição
 
         .voltar-wrapper {
-            margin-top: 30px; // Reduz espaço para melhor visualização
-            
+            margin-top: 30px;
+
             .icons {
-                left: auto; // Remove posição fixa para se ajustar dinamicamente
-                position: static; // Previne sobreposição em telas pequenas
-                gap: 10px; // Reduz espaço entre ícones
+                left: auto;
+                position: static;
+                gap: 10px;
             }
         }
     }
