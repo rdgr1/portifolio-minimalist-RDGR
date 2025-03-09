@@ -1,7 +1,7 @@
 <div class="project-container">
     <div class="header" (mouseover)="isHovered = true" (mouseleave)="isHovered = false">
         <h1 *ngIf="!isHovered || isMobile">Projetos</h1>
-        <app-nav-bar *ngIf="isHovered || isMobile"></app-nav-bar>
+         <app-nav-bar *ngIf="isMobile || isHovered" ></app-nav-bar>
             <span *ngIf="isMobile" class="aviso">Dê um clique para ver a descrição</span>
     </div>
     <!-- 📌 Desktop: Exibir grid de projetos -->

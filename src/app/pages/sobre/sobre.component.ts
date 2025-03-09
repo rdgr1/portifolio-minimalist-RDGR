@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-sobre',
+    standalone: true,
     imports: [SobreMimComponent, NavBarComponent, SetaComponentComponent],
     templateUrl: './sobre.component.html',
     styleUrl: './sobre.component.scss'

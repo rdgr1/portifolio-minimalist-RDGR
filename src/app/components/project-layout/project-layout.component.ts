@@ -14,9 +14,16 @@ import { Router } from '@angular/router';
 })
 export class ProjectLayoutComponent {
   isHovered: boolean = false;
-  isMobile: boolean = window.innerWidth <= 768; // 🔹 Define se é mobile ou desktop
+  isMobile: boolean = typeof window !== 'undefined' && window.innerWidth <= 768;
   currentIndex: number = 0;
-
+  ngOnInit() {
+    if (typeof window !== 'undefined') {
+      this.isMobile = window.innerWidth <= 768;
+      setTimeout(() => {
+        this.isMobile = window.innerWidth <= 768; // 🔹 Garante atualização no próximo ciclo de renderização
+      }, 0);
+    }
+  }
   constructor(private router: Router) {}
 
   projetos = [

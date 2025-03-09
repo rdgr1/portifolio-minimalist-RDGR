@@ -3,6 +3,7 @@ import { ProjectLayoutComponent } from "../../components/project-layout/project-
 
 @Component({
     selector: 'app-projetos',
+    standalone: true,
     imports: [ProjectLayoutComponent],
     templateUrl: './projetos.component.html',
     styleUrl: './projetos.component.scss'

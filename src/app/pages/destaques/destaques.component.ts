@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-destaques',
+    standalone: true,
     imports: [CarrouselLayoutComponent, NavBarComponent, SetaComponentComponent, SliderLogoComponent],
     templateUrl: './destaques.component.html',
     styleUrl: './destaques.component.scss'
