@@ -42,6 +42,7 @@ export class ProjectLayoutComponent {
     {
       title: 'Portifolio Minimalista',
       text: 'Portifolio pessoal, Minimalista feito em Angular 18...',
+      linkGithub: 'https://github.com/rdgr1/portifolio-minimalist-RDGR',
       linkImg: '/assets/imgs/cards/Card-Portifollio.png'
     },
     {
