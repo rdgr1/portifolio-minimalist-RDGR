@@ -47,7 +47,9 @@ spring.mail.port=587
 spring.mail.username=SEU_EMAIL
 spring.mail.password=SUA_SENHA
 ```
+
 	2.	Rodar o backend
+ 
 ```sh
 mvn spring-boot:run
 ```
@@ -55,7 +57,7 @@ mvn spring-boot:run
 ⸻
 
 🛠 Estrutura do Projeto
-
+```
 📂 portifolio-minimalist-RDGR
  ├── 📂 frontend (Angular)
  │   ├── src/app
@@ -68,7 +70,7 @@ mvn spring-boot:run
  │   ├── src/main/resources
  │   ├── pom.xml
  │   └── application.properties
-
+```
 
 
 ⸻
