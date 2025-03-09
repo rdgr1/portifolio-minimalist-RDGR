@@ -36,7 +36,7 @@ cd portifolio-minimalist-RDGR
 ```sh
 npm install
 ng serve
-```
+``` 
 Acesse: http://localhost:4200/
 
 3️⃣ Configuração do Backend (Spring Boot)
@@ -47,13 +47,10 @@ spring.mail.port=587
 spring.mail.username=SEU_EMAIL
 spring.mail.password=SUA_SENHA
 ```
-
-	2.	Rodar o backend
- 
+2️⃣ Rodar o backend
 ```sh
 mvn spring-boot:run
 ```
-
 ⸻
 
 🛠 Estrutura do Projeto
