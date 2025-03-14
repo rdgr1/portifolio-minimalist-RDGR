@@ -81,13 +81,15 @@
     }
 
     p {
-      font-size: 14px; // 🔹 Reduz tamanho para encaixar melhor no card
-      margin-top: 8px; // 🔹 Diminui espaçamento para evitar cortes
-      text-align: center; // 🔹 Mantém centralizado
-      line-height: 1.4; // 🔹 Melhora a legibilidade
+      font-size: 14px; /* 🔹 Reduz tamanho para encaixar melhor no card */
+      margin-top: 8px; /* 🔹 Diminui espaçamento para evitar cortes */
+      text-align: center; /* 🔹 Mantém centralizado */
+      line-height: 1.4; /* 🔹 Melhora a legibilidade */
       word-wrap: break-word;
       overflow-wrap: break-word;
-    }
+      white-space: normal; /* Permite que o texto se ajuste no container */
+      overflow: visible; /* Garante que o conteúdo não seja cortado */
+    }    
   }
   /* Mantém os links na posição correta */
   .links-container {

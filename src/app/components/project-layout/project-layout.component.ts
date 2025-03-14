@@ -29,13 +29,13 @@ export class ProjectLayoutComponent {
   projetos = [
     {
       title: 'Projeto MS-Login-Email',
-      text: 'Este repositório contém dois microserviços...',
+      text: 'Este repositório contém dois microserviços que fazem parte de uma solução maior para gerenciamento de usuários e envio de emails.',
       linkImg: '/assets/imgs/cards/Card-Login-Email.png',
       linkGithub: 'https://github.com/rdgr1/ms-for-save-send-mail'
     },
     {
       title: 'Sistema de Autenticação com JWT',
-      text: 'Este projeto implementa um sistema de autenticação...',
+      text: 'Este projeto implementa um sistema de autenticação utilizando JSON Web Tokens (JWT), composto por um backend em Spring Boot e um frontend em Angular.',
       linkImg: '/assets/imgs/cards/Card-Login-Jwt.png',
       linkGithub: 'https://github.com/rdgr1/login-jwt/tree/master'
     },
@@ -47,19 +47,19 @@ export class ProjectLayoutComponent {
     },
     {
       title: 'Automação CAC Java',
-      text: 'Este projeto é uma aplicação desenvolvida para...',
+      text: 'Este projeto é uma aplicação desenvolvida para automatizar o processamento e manipulação de PDFs, além de gerenciar fluxos administrativos. Emitindo Declarações Nada Consta, Utilizando Spring',
       linkImg: '/assets/imgs/cards/Card-CAC-Java.png',
       linkGithub: 'https://github.com/rdgr1/Automacao-CAC-Java'
     },
     {
       title: 'Automação CAC Python',
-      text: 'Este projeto é uma aplicação desenvolvida para...',
+      text: 'Este projeto é uma aplicação desenvolvida para automatizar o processamento e manipulação de PDFs, além de gerenciar fluxos administrativos. Utilizando Selenium e Bibliotecas Atuais de Request',
       linkImg: '/assets/imgs/cards/Card-Python.png',
       linkGithub: 'https://github.com/rdgr1/Automacao_CAC-py'
     },
     {
       title: 'Aprendizado de Spring',
-      text: 'Este repositório contém um projeto de aprendizado...',
+      text: 'projeto de aprendizado prático para explorar os conceitos e melhores práticas do Spring Boot. Ele serve como um guia para desenvolvedores que desejam se aprofundar no desenvolvimento de aplicações Java com a estrutura Spring Boot',
       linkImg: '/assets/imgs/cards/CardSpringAprendizado.png',
       linkGithub: 'https://github.com/rdgr1/springboot-learning-rod'
     },
@@ -71,9 +71,21 @@ export class ProjectLayoutComponent {
     },
     {
       title: 'Token-Email',
-      text: 'O projeto Token-Email foi desenvolvido como um teste...',
+      text: 'O projeto Token-Email foi desenvolvido como um simulador de smtp, para criação de um template para envio de emails sem utilizar css avançado',
       linkImg: '/assets/imgs/cards/Card-Token-Email.png',
       linkGithub: 'https://github.com/rdgr1/Token-Email'
+    },
+    {
+      title: 'Automação Simianer Holding',
+      text: 'Este projeto é uma aplicação desenvolvida para automatizar processos específicos relacionados à gestão de recibos e outras funcionalidades administrativas.',
+      linkImg: '/assets/imgs/cards/Card-Simianer-Holdin.png',
+      linkGithub: 'https://github.com/rdgr1/Automacao-Simianer-Holding'
+    },
+    {
+      title: 'Automação FMV',
+      text: 'Este é um aplicativo simples criado com a biblioteca customtkinter para facilitar o preenchimento e geração de uma nota fiscal com informações do cliente, serviço prestado, e dados financeiros (débito/crédito).',
+      linkImg: '/assets/imgs/cards/Card-FMv.png',
+      linkGithub: 'https://github.com/rdgr1/gerador_fmv'
     }
   ];
 
