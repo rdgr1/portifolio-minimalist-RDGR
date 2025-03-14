@@ -4,9 +4,6 @@ import { SetaComponentComponent } from "../seta-component/seta-component.compone
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { title } from 'node:process';
-import { text } from 'node:stream/consumers';
-import { link } from 'node:fs';
 
 @Component({
     selector: 'app-project-layout',

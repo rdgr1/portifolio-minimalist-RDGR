@@ -1,3 +1,14 @@
+app-background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  display: block;
+  overflow: hidden;
+}
 .container {
   height: 100dvh;
   display: flex;
@@ -5,7 +16,7 @@
   align-items: center;
   position: relative;
   gap: clamp(20px, 10vw, 200px);
-
+  background: var(--black);
   .header-index {
     margin-top: 200px;
   }

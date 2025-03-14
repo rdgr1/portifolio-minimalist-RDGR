@@ -1,21 +1,22 @@
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, Inject, Input, PLATFORM_ID } from '@angular/core';
 import { HeaderIndexComponent } from "../../components/header-index/header-index.component";
 import { SetaComponentComponent } from "../../components/seta-component/seta-component.component";
 import { ButtonDarkModeComponent } from "../../components/button-dark-mode/button-dark-mode.component";
 import { Router } from '@angular/router';
 import { NavBarComponent } from "../../components/nav-bar/nav-bar.component";
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { BackgroundGradientComponent } from "../../ui/animation/background-gradient/background-gradient.component";
 
 @Component({
   selector: 'app-index',
   standalone: true,
-  imports: [HeaderIndexComponent, SetaComponentComponent, ButtonDarkModeComponent, NavBarComponent, CommonModule],
+  imports: [HeaderIndexComponent, SetaComponentComponent, ButtonDarkModeComponent, NavBarComponent, CommonModule, BackgroundGradientComponent],
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent {
 isScrolled: boolean = false;
-isDarkMode: boolean = false;
+@Input() isDarkMode: boolean = true;
 isHovered: boolean = false;
 isMobile: boolean = false; // 🔹 Inicializa sem window.innerWidth
 
@@ -28,6 +29,11 @@ constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: obj
 
 toggleDarkMode(): void {
   this.isDarkMode = !this.isDarkMode;
+  if (this.isDarkMode) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
 }
 
 navigateTo() {
