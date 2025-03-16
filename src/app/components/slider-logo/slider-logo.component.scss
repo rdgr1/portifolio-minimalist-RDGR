@@ -17,11 +17,11 @@
     height: var(--height);
     position: absolute;
     left: 100%;
-    animation: autoRun 7s linear infinite;
-    animation-delay: calc((7s / var(--quantity)) * (var(--position) - 1));
+    animation: autoRun 8s linear infinite;
+    animation-delay: calc((8s / var(--quantity)) * (var(--position) - 1));
     path {
       fill: var(--white);
-      width: 50px;
+      width: clamp(15px,2vw,50px);
     }
   }
   @keyframes autoRun {

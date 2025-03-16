@@ -5,19 +5,15 @@
     align-items: center;
     justify-content: flex-start; // 🔹 Garante que a nav bar fique visível no topo
     background-color: var(--black);
-
     .voltar-wrapper {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 60px;
         position: relative;
-
         .arrow-down {
             transform: rotate(540deg);
         }
-
         .icons {
             display: flex;
             justify-content: center;
@@ -27,6 +23,10 @@
             gap: 20px;
         }
     }
+    .logo-slider{
+        width: 100%;
+        padding: 70px 0px;
+    }
 }
 
 /* 🔹 Responsividade mínima para telas menores */
@@ -34,7 +34,6 @@
     .container {
         min-height: auto; // 🔹 Permite crescimento conforme necessário
         padding: 59px 0px; // 🔹 Mantém espaçamento para evitar sobreposição
-
         .voltar-wrapper {
             margin-top: 30px;
 
@@ -43,6 +42,11 @@
                 position: static;
                 gap: 10px;
             }
+        }
+        .logo-slider{
+            width: 100%;
+            padding-top: 70px !important;
+            padding-bottom: 0px;
         }
     }
 }

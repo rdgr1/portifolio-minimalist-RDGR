@@ -3,11 +3,12 @@ import { FormularioLayoutComponent } from "../../components/formulario-layout/fo
 import { NavBarComponent } from "../../components/nav-bar/nav-bar.component";
 import { SetaComponentComponent } from "../../components/seta-component/seta-component.component";
 import { Router } from '@angular/router';
+import { SliderLogoComponent } from "../../components/slider-logo/slider-logo.component";
 
 @Component({
     selector: 'app-formulario',
     standalone: true,
-    imports: [FormularioLayoutComponent, NavBarComponent, SetaComponentComponent],
+    imports: [FormularioLayoutComponent, NavBarComponent, SetaComponentComponent, SliderLogoComponent],
     templateUrl: './formulario.component.html',
     styleUrl: './formulario.component.scss'
 })

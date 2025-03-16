@@ -40,6 +40,24 @@
             span {
                 font-size: clamp(10px,5vw,27px);
             }
+            .container-icons {
+                display: flex;
+                gap: 20px;
+              }
+              
+              .icons {
+                display: inline-block;
+                color: var(--white); /* Define a cor dos ícones */
+              }
+              .icons svg {
+                width: 35px;
+                height: 35px;
+                fill: currentColor;
+                transition: transform 0.3s ease-in-out;
+              }
+              .icons:hover svg {
+                transform: scale(1.1);
+              }
         }
     }
     .container-experiencia-linguagens{
