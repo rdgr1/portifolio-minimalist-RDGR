@@ -1,21 +1,23 @@
-<div class="container" [class.dark-mode]="isDarkMode">
-  <div class="navbar"
-      (mouseover)="setHovered(true)"
-      (mouseleave)="setHovered(false)">
+<app-wallpaper-morphing>
+    <div class="container" [class.dark-mode]="isDarkMode">
+        <div class="navbar"
+            (mouseover)="setHovered(true)"
+            (mouseleave)="setHovered(false)">
+            
+            <!-- 🔹 No Desktop: Navbar aparece apenas no hover -->
+            <!-- 🔹 No Mobile: Navbar sempre aparece -->
+            <app-nav-bar *ngIf="isHovered || isMobile"></app-nav-bar>
+        </div>
       
-      <!-- 🔹 No Desktop: Navbar aparece apenas no hover -->
-      <!-- 🔹 No Mobile: Navbar sempre aparece -->
-      <app-nav-bar *ngIf="isHovered || isMobile"></app-nav-bar>
-  </div>
-
-  <div class="button-dark-mode" (click)="toggleDarkMode()">
-      <app-button-dark-mode></app-button-dark-mode>
-  </div>
-
-  <div class="header-index">
-      <app-header-index></app-header-index>
-  </div>
-  <div class="seta-wrapper">
-  <app-seta-component (click)="navigateTo()"></app-seta-component>
-  </div>
-</div>
+        <div class="button-dark-mode" (click)="toggleDarkMode()">
+            <app-button-dark-mode></app-button-dark-mode>
+        </div>
+      
+        <div class="header-index">
+            <app-header-index></app-header-index>
+        </div>
+        <div class="seta-wrapper">
+        <app-seta-component (click)="navigateTo()"></app-seta-component>
+        </div>
+      </div>
+</app-wallpaper-morphing>

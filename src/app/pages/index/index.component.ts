@@ -5,11 +5,12 @@ import { ButtonDarkModeComponent } from "../../components/button-dark-mode/butto
 import { Router } from '@angular/router';
 import { NavBarComponent } from "../../components/nav-bar/nav-bar.component";
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { WallpaperMorphingComponent } from "../../components/wallpaper-morphing/wallpaper-morphing.component";
 
 @Component({
   selector: 'app-index',
   standalone: true,
-  imports: [HeaderIndexComponent, SetaComponentComponent, ButtonDarkModeComponent, NavBarComponent, CommonModule],
+  imports: [HeaderIndexComponent, SetaComponentComponent, ButtonDarkModeComponent, NavBarComponent, CommonModule, WallpaperMorphingComponent],
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss']
 })
