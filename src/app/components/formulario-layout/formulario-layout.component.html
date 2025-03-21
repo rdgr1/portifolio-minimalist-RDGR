@@ -1,7 +1,26 @@
 <div class="form-container">
-    <h1>Interessado no meu Trabalho?</h1>
-    <h2>Mande uma mensagem abaixo <span> :)</span></h2>
-  
+  <div class="header">
+    <h1>Interessado(a) no meu Trabalho?</h1>
+    <div class="instrucoes-orcamento">
+      <h3>Como pedir um orçamento?</h3>
+      <div class="title">
+        <span>✅</span>
+        <h4>Precisa de um bot ou automação?</h4>
+      </div>
+      <p>
+        Descreva em detalhes o que precisa ser automatizado (quais passos manuais gostaria de automatizar).<br />
+        Mencione o site e quais processos gostaria de automatizar.
+      </p>
+      <div class="title">
+        <span>✅</span>
+        <h4>Precisa de um sistema ou site?</h4>
+      </div>
+      <p>
+        Descreva a visão ou as funcionalidades que imagina serem necessárias. <br />
+        Exemplo: “Quero um sistema para fazer X, Y, Z e que me permita fazer A, B, C, D”.
+      </p>
+    </div>
+  </div>
     <form [formGroup]="contatoForm" (ngSubmit)="submit()">
       <app-input-formulario
         formControlName="name"
