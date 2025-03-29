@@ -103,6 +103,26 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
+    svg{
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+    }
+    .open-carousel-btn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 47px;
+      height: 47px;
+      background-color: var(--black);
+      border: none;
+      border-radius: 100%;
+       svg{
+        width: 25px;
+        height: 25px;
+      }
+    }
   }
 
   .links-container img {

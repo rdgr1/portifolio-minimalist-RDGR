@@ -4,11 +4,12 @@ import { SetaComponentComponent } from "../seta-component/seta-component.compone
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-
+import { ViewChild } from '@angular/core';
+import { ProjectCarouselModalComponent } from '../project-carousel-modal/project-carousel-modal.component';
 @Component({
     selector: 'app-project-layout',
     standalone: true,
-    imports: [CardProjetoComponent, SetaComponentComponent, NavBarComponent, CommonModule],
+    imports: [CardProjetoComponent, SetaComponentComponent, NavBarComponent, CommonModule, ProjectCarouselModalComponent],
     templateUrl: './project-layout.component.html',
     styleUrls: ['./project-layout.component.scss']
 })
@@ -16,6 +17,11 @@ export class ProjectLayoutComponent {
   isHovered: boolean = false;
   isMobile: boolean = typeof window !== 'undefined' && window.innerWidth <= 768;
   currentIndex: number = 0;
+  @ViewChild('carouselModal') carouselModal!: ProjectCarouselModalComponent;
+
+  abrirModal(images: string[]) {
+    this.carouselModal.open(images);
+  }
   ngOnInit() {
     if (typeof window !== 'undefined') {
       this.isMobile = window.innerWidth <= 768;
@@ -31,61 +37,50 @@ export class ProjectLayoutComponent {
       title: 'Projeto MS-Login-Email',
       text: 'Este repositório contém dois microserviços que fazem parte de uma solução maior para gerenciamento de usuários e envio de emails.',
       linkImg: '/assets/imgs/cards/Card-Login-Email.png',
-      linkGithub: 'https://github.com/rdgr1/ms-for-save-send-mail'
+      linkGithub: 'https://github.com/rdgr1/ms-for-save-send-mail',
+      disableImg: false,
+      disableGithub: false,
+      images: ['/assets/imgs/png/MS-SERVICE-SCHEMA.png']
     },
     {
       title: 'Sistema de Autenticação com JWT',
       text: 'Este projeto implementa um sistema de autenticação utilizando JSON Web Tokens (JWT), composto por um backend em Spring Boot e um frontend em Angular.',
       linkImg: '/assets/imgs/cards/Card-Login-Jwt.png',
-      linkGithub: 'https://github.com/rdgr1/login-jwt/tree/master'
-    },
-    {
-      title: 'Portifolio Minimalista',
-      text: 'Portifolio pessoal, Minimalista feito em Angular 18...',
-      linkGithub: 'https://github.com/rdgr1/portifolio-minimalist-RDGR',
-      linkImg: '/assets/imgs/cards/Card-Portifollio.png'
-    },
-    {
-      title: 'Automação CAC Java',
-      text: 'Este projeto é uma aplicação desenvolvida para automatizar o processamento e manipulação de PDFs, além de gerenciar fluxos administrativos. Emitindo Declarações Nada Consta, Utilizando Spring',
-      linkImg: '/assets/imgs/cards/Card-CAC-Java.png',
-      linkGithub: 'https://github.com/rdgr1/Automacao-CAC-Java'
-    },
-    {
-      title: 'Automação CAC Python',
-      text: 'Este projeto é uma aplicação desenvolvida para automatizar o processamento e manipulação de PDFs, além de gerenciar fluxos administrativos. Utilizando Selenium e Bibliotecas Atuais de Request',
-      linkImg: '/assets/imgs/cards/Card-Python.png',
-      linkGithub: 'https://github.com/rdgr1/Automacao_CAC-py'
+      linkGithub: 'https://github.com/rdgr1/login-jwt/tree/master',
+      disableImg: false,
+      disableGithub: false,
+      images: [
+        'assets/imgs/png/JWT-LOGIN.png',
+        'assets/imgs/png/JWT-REGISTER.png'
+      ]
     },
     {
       title: 'Aprendizado de Spring',
       text: 'projeto de aprendizado prático para explorar os conceitos e melhores práticas do Spring Boot. Ele serve como um guia para desenvolvedores que desejam se aprofundar no desenvolvimento de aplicações Java com a estrutura Spring Boot',
       linkImg: '/assets/imgs/cards/CardSpringAprendizado.png',
-      linkGithub: 'https://github.com/rdgr1/springboot-learning-rod'
-    },
-    {
-      title: 'Caderno Digital MD Rodger',
-      text: 'Meu Caderno Digital, para estudos no obsidian...',
-      linkImg: '/assets/imgs/cards/Card-Obsidian.png',
-      linkGithub: 'https://github.com/rdgr1/Caderno-Digital-MD_RODGER'
-    },
-    {
-      title: 'Token-Email',
-      text: 'O projeto Token-Email foi desenvolvido como um simulador de smtp, para criação de um template para envio de emails sem utilizar css avançado',
-      linkImg: '/assets/imgs/cards/Card-Token-Email.png',
-      linkGithub: 'https://github.com/rdgr1/Token-Email'
+      linkGithub: 'https://github.com/rdgr1/springboot-learning-rod',
+      disableImg: true,
+      disableGithub: false,
+      images: [""]
     },
     {
       title: 'Automação Simianer Holding',
       text: 'Este projeto é uma aplicação desenvolvida para automatizar processos específicos relacionados à gestão de recibos e outras funcionalidades administrativas.',
       linkImg: '/assets/imgs/cards/Card-Simianer-Holdin.png',
-      linkGithub: 'https://github.com/rdgr1/Automacao-Simianer-Holding'
+      linkGithub: 'https://github.com/rdgr1/Automacao-Simianer-Holding',
+      disableImg: false,
+      disableGithub: true,
+      images: ['/assets/imgs/png/TKINTER-SIMIANER.png','/assets/imgs/png/Recibo-Simianer.png']
     },
     {
       title: 'Automação FMV',
-      text: 'Este é um aplicativo simples criado com a biblioteca customtkinter para facilitar o preenchimento e geração de uma nota fiscal com informações do cliente, serviço prestado, e dados financeiros (débito/crédito).',
+      text: 'Este é um aplicativo simples criado com a biblioteca customtkinter para facilitar o preenchimento e geração de uma nota de recibo com informações do cliente, serviço prestado, e dados financeiros (débito/crédito).',
       linkImg: '/assets/imgs/cards/Card-FMv.png',
-      linkGithub: 'https://github.com/rdgr1/gerador_fmv'
+      linkGithub: 'https://github.com/rdgr1/gerador_fmv',
+      disableImg: false,
+      disableGithub: true,
+      images: ['/assets/imgs/png/TKINTER-FMV.png',
+        '/assets/imgs/png/Recibo-FMV.png']
     }
   ];
 

@@ -1,0 +1,12 @@
+<!-- project-carousel-modal.component.html -->
+<div class="modal-overlay" *ngIf="isOpen" (click)="close()">
+    <div class="modal-container" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="close()">✖️</button>
+  
+      <swiper-container [navigation]="true" [pagination]="true">
+        <swiper-slide *ngFor="let img of images">
+          <img [src]="img" alt="Imagem do projeto" style="width: 100%; max-height: 600px;" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>

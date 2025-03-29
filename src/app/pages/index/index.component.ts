@@ -5,6 +5,7 @@ import { ButtonDarkModeComponent } from "../../components/button-dark-mode/butto
 import { Router } from '@angular/router';
 import { NavBarComponent } from "../../components/nav-bar/nav-bar.component";
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { SliderLogoComponent } from "../../components/slider-logo/slider-logo.component";
 
 @Component({
   selector: 'app-index',

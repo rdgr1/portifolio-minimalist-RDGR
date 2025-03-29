@@ -4,13 +4,17 @@
          <app-nav-bar *ngIf="isMobile || isHovered" ></app-nav-bar>
             <span *ngIf="isMobile" class="aviso">Dê um clique para ver a descrição</span>
     </div>
+    <app-project-carousel-modal #carouselModal></app-project-carousel-modal>
     <!-- 📌 Desktop: Exibir grid de projetos -->
     <div class="container-cards desktop">
         <app-card-projeto *ngFor="let projeto of projetos"
             [title]="projeto.title"
             [text]="projeto.text"
             [linkImg]="projeto.linkImg"
-            [linkGithub]="projeto.linkGithub || ''">
+            [disableImg]="projeto.disableImg"
+            [disableGithub]="projeto.disableGithub"
+            [linkGithub]="projeto.linkGithub || ''"
+            (openCarousel)="abrirModal(projeto.images)">
         </app-card-projeto>
     </div>
 
@@ -22,8 +26,11 @@
                 [title]="projetos[currentIndex].title"
                 [text]="projetos[currentIndex].text"
                 [linkImg]="projetos[currentIndex].linkImg"
-                [linkGithub]="projetos[currentIndex].linkGithub || ''">
-            </app-card-projeto>
+                [disableImg]="projetos[currentIndex].disableImg"
+                [disableGithub]="projetos[currentIndex].disableGithub"
+                [linkGithub]="projetos[currentIndex].linkGithub || ''" 
+                (openCarousel)="abrirModal(projetos[currentIndex].images)"
+                ></app-card-projeto>
         </div>
         <button class="carousel-btn right" (click)="nextSlide()">→</button>
     </div>

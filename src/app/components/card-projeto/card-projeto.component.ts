@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
 
 @Component({
     selector: 'app-card-projeto',
@@ -17,8 +17,11 @@ export class CardProjetoComponent {
   @Input() linkImg: string = "";
   @Input() linkProject: string = "";
   @Input() linkGithub: string = "";
+  @Input() disableImg: boolean = false
+  @Input() disableGithub : boolean = false
+  // ✅ Evento para abrir o carousel
+  @Output() openCarousel = new EventEmitter<void>();
 
-  // 📌 Hover para desktop
   onMouseEnter() {
     this.isHovered = true;
   }
@@ -27,18 +30,22 @@ export class CardProjetoComponent {
     this.isHovered = false;
   }
 
-  // 📌 Alternar descrição no mobile ao toque
   toggleMobileDescription(event: Event) {
-    event.stopPropagation(); // Impede que o evento se propague e feche imediatamente
+    event.stopPropagation();
     this.isMobileActive = !this.isMobileActive;
   }
 
-  // 📌 Fechar descrição no mobile ao tocar fora
   @HostListener('document:click', ['$event'])
   closeDescription(event: Event) {
     const targetElement = event.target as HTMLElement;
     if (!targetElement.closest('.container-card')) {
       this.isMobileActive = false;
     }
+  }
+
+  // ✅ Método para emitir o evento de abertura do modal
+  openCarouselModal(event: Event) {
+    event.stopPropagation();
+    this.openCarousel.emit();
   }
 }
