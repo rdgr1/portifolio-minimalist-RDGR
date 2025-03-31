@@ -37,12 +37,16 @@ export class LanguageStatusBarComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.barRefs.forEach((el, i) => {
-        const width = this.barLevels[i].width;
-        const value = parseInt(width);
+        const targetWidth = this.barLevels[i].width;
+        const minWidth = '30%';
+  
+        // Começa com 30%
+        el.nativeElement.style.width = minWidth;
+  
         setTimeout(() => {
-          el.nativeElement.style.width = width;
-          this.animatePercentage(i, value);
-        }, 200);
+          el.nativeElement.style.width = targetWidth;
+          this.animatePercentage(i, parseInt(targetWidth));
+        }, 200); // Tempo de delay pode ser ajustado
       });
     }
   }
