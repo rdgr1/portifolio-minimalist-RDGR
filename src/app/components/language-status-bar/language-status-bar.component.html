@@ -1,37 +1,28 @@
-<div class="bar-container">
-    <img src="/assets/imgs/png/bar-angular.png" alt="Angular Icon">
+<div class="bar-container" *ngFor="let bar of barLevels; let i = index">
+  <img
+    [src]="'/assets/imgs/png/bar-' + bar.label.toLowerCase() + '.png'"
+    [alt]="bar.label + ' Icon'"
+    [ngClass]="bar.iconClass"
+  />
+
+  <div class="bar-wrapper">
     <div class="bar">
-      <div class="level1"></div>
+      <div
+        #barRef
+        [class]="bar.cssClass"
+        [style.--bar-color]="bar.color"
+      ></div>
+
+      <div class="stars" [ngStyle]="{ color: bar.color }">
+        <ng-container *ngFor="let star of getStars(bar.width)">
+          ★
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- Fora da .bar, mas ainda alinhada -->
+    <div class="percentage" [ngStyle]="{ color: bar.color }">
+      {{ displayedPercents[i] }}%
     </div>
   </div>
-  <div class="bar-container">
-    <img src="/assets/imgs/png/bar-java.png" alt="Java Icon">
-    <div class="bar">
-      <div class="level2"></div>
-    </div>
-  </div>
-  <div class="bar-container">
-    <img src="/assets/imgs/png/bar-type.png" alt="TypeScript Icon">
-    <div class="bar">
-      <div class="level3"></div>
-    </div>
-  </div>
-  <div class="bar-container">
-    <img src="/assets/imgs/png/bar-python.png" alt="Python Icon">
-    <div class="bar">
-      <div class="level4"></div>
-    </div>
-  </div>
-  <div class="bar-container">
-    <img src="/assets/imgs/png/bar-postgres.png" alt="Postgres Icon">
-    <div class="bar">
-      <div class="level5"></div>
-    </div>
-  </div>
-  <div class="bar-container">
-    <img src="/assets/imgs/png/bar-spring.png" alt="Spring Icon">
-    <div class="bar">
-      <div class="level6"></div>
-    </div>
-  </div>
-  
+</div>

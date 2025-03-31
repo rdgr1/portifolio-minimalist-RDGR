@@ -1,44 +1,77 @@
 .bar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 17px;
 
-    img {
-      margin-right: 15px;
-    }
-  
-    .bar {
-      width: clamp(100px,20vw,322px);
-      height: clamp(5px,2vw,17px);
-      background-color: var(--white);
+  img {
+    width: 30px;
+    margin-right: 15px;
+  }
+
+  .kotlin-icon {
+    width: 19px;
+  }
+
+  .sass-icon {
+    width: 32px;
+  }
+
+  .bar-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .bar {
+    position: relative;
+    width: clamp(100px, 20vw, 322px);
+    height: clamp(5px, 2vw, 17px);
+    background-color: var(--white);
+    border-radius: 22px;
+    overflow: hidden;
+    margin-right: 24px;
+
+    div {
+      height: 100%;
+      width: 0;
       border-radius: 22px;
-      overflow: hidden; /* Garante que as barras internas não ultrapassem os limites */
-      div {
-        height: clamp(5px,2vw,17px);
-        border-radius: 22px;
-        width: 0; /* Começa com largura 0 */
-        transition: width 1s ease-in-out; /* Transição suave da largura */
-        border: 1px solid;
+      transition: width 1s ease-in-out;
+      background-color: var(--bar-color);
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 12px;
+        height: 100%;
+        box-shadow: 0 0 12px 6px var(--bar-color);
       }
-      .level1 {
-        background-color: #b71c1c;
-      }
-      .level2 {
-        background-color: #ea4134;
-      }
-      .level3 {
-        background-color: #1976d2;
-      }
-      .level4 {
-        background-color: #ffc107;
-      }
-      .level5 {
-        background-color: #0277bd;
-      }
-      .level6 {
-        background-color: #8bc34a;
-      }
+    }
+
+    .stars {
+      position: absolute;
+      top: -24px;
+      right: 0;
+      opacity: 0;
+      font-size: 18px;
+      transition: opacity 0.3s ease-in-out;
+      pointer-events: none;
+    }
+
+    &:hover .stars {
+      opacity: 1;
     }
   }
-  
+
+  .percentage {
+    font-weight: 600;
+    text-shadow:
+      0 0 3px var(--bar-color),
+      0 0 6px var(--bar-color),
+      0 0 9px var(--bar-color);
+    min-width: 30px;
+  }
+}
