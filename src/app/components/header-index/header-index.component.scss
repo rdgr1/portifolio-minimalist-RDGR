@@ -16,7 +16,7 @@ header {
         z-index: 1;
         text-align: center; /* Garante que fique centralizado */
         margin: 0; /* Remove margem lateral fixa */
-        transition: all 0.9s ease-in-out;
+        transition: none;
     }
     .subtitle-container {
         display: flex;
@@ -29,8 +29,8 @@ header {
             display: flex;
             gap: 10px; /* Espaçamento entre os ícones */
             margin-top: 10px;
-        transition: all 0.9s ease-in-out;
         }
+        transition: none;
         .icons-container {
             display: flex;
             gap: 10px;
@@ -40,7 +40,6 @@ header {
             width: clamp(30px,4w,60px); 
             height: auto;
             padding: 5px;
-            transition: all 0.9s ease-in-out;
         }
          .icons-container svg {
             fill: var(--white);
