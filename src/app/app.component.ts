@@ -19,11 +19,6 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class AppComponent {
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      document.querySelector('header')?.classList.add('fade-in');
-      document.querySelector('.subtitle-container')?.classList.add('fade-in');
-      document.querySelector('.icons-container')?.classList.add('fade-in');
-    }, 100);
   }
   title = 'portifolio-minimalist-RDGR';
 }
