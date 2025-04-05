@@ -28,7 +28,8 @@
            }
            .personal-pic{
             img{
-                width: clamp(150px,20vw,302px);
+                width: clamp(130px,20vw,250px);
+                border-radius: 100%;
             }
             display: flex;
             flex-direction: column;
