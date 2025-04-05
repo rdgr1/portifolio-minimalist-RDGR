@@ -12,7 +12,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
     trigger('routeFade', [
       transition('* <=> *', [
         style({ opacity: 0 }),
-        animate('300ms ease-in-out', style({ opacity: 1 }))
+        animate('100ms ease-in-out', style({ opacity: 1 }))
       ])
     ])
   ]
