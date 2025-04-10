@@ -31,16 +31,6 @@ export class FormularioLayoutComponent implements OnInit {
       message: new FormControl('', [Validators.required, Validators.minLength(10)])
     });
   }
-
-  ngOnInit() {
-    if (this.isBrowser) { // Só executa no navegador
-      const hasClicked = localStorage.getItem('buttonClicked');
-      this.hasClickedBefore = hasClicked === 'true';
-  
-      // 🔥 Alterado: o botão só deve ser desativado se o formulário ainda estiver sendo enviado
-      this.isDisabled = false;
-    }
-  }
   
   submit() {
     if (this.contatoForm.invalid) {
