@@ -8,6 +8,7 @@ header {
     position: relative;
     gap: clamp(5px,2vw,20px); /* Define um contexto para posicionamento */
     min-height: 15vh;
+    transition: 1s ease-in-out;
     h1 {
         font-family: 'SF-pro';
         font-weight: 650;
@@ -16,7 +17,6 @@ header {
         z-index: 1;
         text-align: center; /* Garante que fique centralizado */
         margin: 0; /* Remove margem lateral fixa */
-        transition: none;
     }
     .subtitle-container {
         display: flex;
@@ -30,7 +30,6 @@ header {
             gap: 10px; /* Espaçamento entre os ícones */
             margin-top: 10px;
         }
-        transition: none;
         .icons-container {
             display: flex;
             gap: 10px;
@@ -43,6 +42,7 @@ header {
         }
          .icons-container svg {
             fill: var(--white);
+            transition: 1s ease-in-out;
         }
         @media (max-width: 768px) {
             position: relative;
@@ -51,7 +51,6 @@ header {
             padding: 20px;
             gap: 15px;
             z-index: 1;
-            
         }
 }    
 
