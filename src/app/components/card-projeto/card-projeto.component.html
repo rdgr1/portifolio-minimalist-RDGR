@@ -13,7 +13,7 @@
   </div>
 
   <div class="links-container">
-    <a *ngIf="linkProject" [href]="linkProject" target="_blank">
+    <a [href]="linkProject" *ngIf="!disableLink" target="_blank">
       <img src="/assets/imgs/png/link-project-card.png" alt="Projeto" />
     </a>
     <a [href]="linkGithub" *ngIf="!disableGithub" target="_blank">
@@ -32,7 +32,6 @@
         </g>
       </svg>
     </a>
-    <!-- ✅ Novo botão para abrir o Carousel -->
     <button
       class="open-carousel-btn"
       (click)="openCarouselModal($event)"

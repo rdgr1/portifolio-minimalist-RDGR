@@ -17,9 +17,9 @@ export class CardProjetoComponent {
   @Input() linkImg: string = "";
   @Input() linkProject: string = "";
   @Input() linkGithub: string = "";
-  @Input() disableImg: boolean = false
-  @Input() disableGithub : boolean = false
-  // ✅ Evento para abrir o carousel
+  @Input() disableLink: boolean = false;
+  @Input() disableImg: boolean = false;
+  @Input() disableGithub : boolean = false;
   @Output() openCarousel = new EventEmitter<void>();
 
   onMouseEnter() {
@@ -43,7 +43,6 @@ export class CardProjetoComponent {
     }
   }
 
-  // ✅ Método para emitir o evento de abertura do modal
   openCarouselModal(event: Event) {
     event.stopPropagation();
     this.openCarousel.emit();

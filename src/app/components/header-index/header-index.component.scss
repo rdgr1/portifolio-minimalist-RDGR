@@ -8,7 +8,6 @@ header {
     position: relative;
     gap: clamp(5px,2vw,20px); /* Define um contexto para posicionamento */
     min-height: 15vh;
-    transition: 1s ease-in-out;
     h1 {
         font-family: 'SF-pro';
         font-weight: 650;
@@ -42,7 +41,6 @@ header {
         }
          .icons-container svg {
             fill: var(--white);
-            transition: 1s ease-in-out;
         }
         @media (max-width: 768px) {
             position: relative;

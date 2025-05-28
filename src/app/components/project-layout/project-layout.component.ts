@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ViewChild } from '@angular/core';
 import { ProjectCarouselModalComponent } from '../project-carousel-modal/project-carousel-modal.component';
+import { title } from 'node:process';
+import { link } from 'node:fs';
 @Component({
     selector: 'app-project-layout',
     standalone: true,
@@ -40,6 +42,7 @@ export class ProjectLayoutComponent {
       linkGithub: 'https://github.com/rdgr1/ms-for-save-send-mail',
       disableImg: false,
       disableGithub: false,
+      disableLink: true,
       images: ['/assets/imgs/png/MS-SERVICE-SCHEMA.png']
     },
     {
@@ -49,6 +52,7 @@ export class ProjectLayoutComponent {
       linkGithub: 'https://github.com/rdgr1/login-jwt/tree/master',
       disableImg: false,
       disableGithub: false,
+      disableLink: true,
       images: [
         'assets/imgs/png/JWT-LOGIN.png',
         'assets/imgs/png/JWT-REGISTER.png'
@@ -61,6 +65,7 @@ export class ProjectLayoutComponent {
       linkGithub: 'https://github.com/rdgr1/springboot-learning-rod',
       disableImg: true,
       disableGithub: false,
+      disableLink: true,
       images: [""]
     },
     {
@@ -70,6 +75,7 @@ export class ProjectLayoutComponent {
       linkGithub: 'https://github.com/rdgr1/Automacao-Simianer-Holding',
       disableImg: false,
       disableGithub: true,
+      disableLink: true,
       images: ['/assets/imgs/png/TKINTER-SIMIANER.png','/assets/imgs/png/Recibo-Simianer.png']
     },
     {
@@ -79,8 +85,19 @@ export class ProjectLayoutComponent {
       linkGithub: 'https://github.com/rdgr1/gerador_fmv',
       disableImg: false,
       disableGithub: true,
+      disableLink: true,
       images: ['/assets/imgs/png/TKINTER-FMV.png',
         '/assets/imgs/png/Recibo-FMV.png']
+    },
+    {
+      title: 'Landing Page Guerreiro Service',
+      text:'Está foi um landing feita para atrair público em geral de facilities e afins, para impulsionar o tráfego pago da empresa, layout minimalista/enxuto, visando tranquilidade e facil entendimento dos valores da empresa',
+      linkImg: '/assets/imgs/cards/Card-Guerreio-Service.png',
+      disableGithub: true,
+      linkProject: 'https://guerreiro-service-front.vercel.app',
+      disableImg: false,
+      disableLink: false,
+      images: ['/assets/imgs/png/desktop_guerreiro_lp.png','/assets/imgs/png/mobile_guerreiro_lp.png']
     }
   ];
 

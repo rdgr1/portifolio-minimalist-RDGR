@@ -13,6 +13,8 @@
             [linkImg]="projeto.linkImg"
             [disableImg]="projeto.disableImg"
             [disableGithub]="projeto.disableGithub"
+            [disableLink]="projeto.disableLink"
+            [linkProject]="projeto.linkProject || ''"
             [linkGithub]="projeto.linkGithub || ''"
             (openCarousel)="abrirModal(projeto.images)">
         </app-card-projeto>
@@ -28,6 +30,7 @@
                 [linkImg]="projetos[currentIndex].linkImg"
                 [disableImg]="projetos[currentIndex].disableImg"
                 [disableGithub]="projetos[currentIndex].disableGithub"
+                [disableLink]="projetos[currentIndex].disableLink"
                 [linkGithub]="projetos[currentIndex].linkGithub || ''" 
                 (openCarousel)="abrirModal(projetos[currentIndex].images)"
                 ></app-card-projeto>
