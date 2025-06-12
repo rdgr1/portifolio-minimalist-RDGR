@@ -9,7 +9,64 @@ app-background-gradient {
   display: block;
   overflow: hidden;
 }
+.animated-wallpaper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+
+  span {
+    position: absolute;
+    width: 50vmax;
+    height: 50vmax;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: move 20s linear infinite alternate;
+    mix-blend-mode: overlay;
+    opacity: 0.7;
+  }
+
+  span:nth-child(1) {
+    background: radial-gradient(circle, var(--color-1), transparent 70%);
+    left: -10%;
+    top: -10%;
+    animation-duration: 18s;
+  }
+
+  span:nth-child(2) {
+    background: radial-gradient(circle, var(--color-2), transparent 70%);
+    right: -10%;
+    bottom: -10%;
+    animation-duration: 22s;
+  }
+
+  span:nth-child(3) {
+    background: radial-gradient(circle, var(--color-3), transparent 70%);
+    left: 30%;
+    bottom: -20%;
+    animation-duration: 26s;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30%, 20%) scale(1.2);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
 .container {
+  --color-1: #8e2de2;
+  --color-2: #ff512f;
+  --color-3: #fff53d;
   height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -41,6 +98,12 @@ app-background-gradient {
       justify-content: center !important;
     }
   }
+}
+
+.container.dark-mode {
+  --color-1: #00c9ff;
+  --color-2: #92fe9d;
+  --color-3: #fcb045;
 }
 @media (max-width: 768px) {
   .container {
