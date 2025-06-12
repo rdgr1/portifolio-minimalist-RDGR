@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
     standalone: true,
     imports: [SobreMimComponent, NavBarComponent, SetaComponentComponent],
     templateUrl: './sobre.component.html',
-    styleUrl: './sobre.component.scss'
+    styleUrls: ['./sobre.component.scss']
 })
 export class SobreComponent {
   constructor(private router : Router){}

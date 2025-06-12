@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
     standalone: true,
     imports: [CarrouselLayoutComponent, NavBarComponent, SetaComponentComponent, SliderLogoComponent],
     templateUrl: './destaques.component.html',
-    styleUrl: './destaques.component.scss'
+    styleUrls: ['./destaques.component.scss']
 })
 export class DestaquesComponent {
 constructor(private router: Router){}

@@ -10,7 +10,7 @@ import { SliderLogoComponent } from "../../components/slider-logo/slider-logo.co
     standalone: true,
     imports: [FormularioLayoutComponent, NavBarComponent, SetaComponentComponent, SliderLogoComponent],
     templateUrl: './formulario.component.html',
-    styleUrl: './formulario.component.scss'
+    styleUrls: ['./formulario.component.scss']
 })
 export class FormularioComponent {
 constructor(private router : Router){

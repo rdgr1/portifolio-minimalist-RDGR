@@ -1,4 +1,4 @@
-import { Component , forwardRef, input, Input} from '@angular/core';
+import { Component , forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 
 type InputTypes = 'text' | 'email' | 'name'
@@ -12,7 +12,7 @@ type InputTypes = 'text' | 'email' | 'name'
             multi: true,
         }],
     templateUrl: './input-formulario.component.html',
-    styleUrl: './input-formulario.component.scss'
+    styleUrls: ['./input-formulario.component.scss']
 })
 export class InputFormularioComponent implements ControlValueAccessor{
 @Input() type: InputTypes = 'text';

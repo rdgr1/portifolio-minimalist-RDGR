@@ -6,7 +6,7 @@ import { ProjectLayoutComponent } from "../../components/project-layout/project-
     standalone: true,
     imports: [ProjectLayoutComponent],
     templateUrl: './projetos.component.html',
-    styleUrl: './projetos.component.scss'
+    styleUrls: ['./projetos.component.scss']
 })
 export class ProjetosComponent {
 

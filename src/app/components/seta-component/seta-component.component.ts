@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
     standalone: true,
     imports: [CommonModule],
     templateUrl: './seta-component.component.html',
-    styleUrl: './seta-component.component.scss'
+    styleUrls: ['./seta-component.component.scss']
 })
 export class SetaComponentComponent {
 @Output() navigate = new EventEmitter<void>();

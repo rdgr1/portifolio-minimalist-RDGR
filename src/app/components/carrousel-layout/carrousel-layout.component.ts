@@ -6,7 +6,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild, Inject, PLATFORM_ID } 
     standalone: true,
     imports: [CommonModule],
     templateUrl: './carrousel-layout.component.html',
-    styleUrl: './carrousel-layout.component.scss'
+    styleUrls: ['./carrousel-layout.component.scss']
 })
 export class CarrouselLayoutComponent implements AfterViewInit {
   @ViewChild('slider') slider!: ElementRef;
