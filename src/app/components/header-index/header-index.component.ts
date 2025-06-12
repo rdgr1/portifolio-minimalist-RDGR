@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     standalone: true,
     imports: [],
     templateUrl: './header-index.component.html',
-    styleUrl: './header-index.component.scss'
+    styleUrls: ['./header-index.component.scss']
 })
 export class HeaderIndexComponent {
 }

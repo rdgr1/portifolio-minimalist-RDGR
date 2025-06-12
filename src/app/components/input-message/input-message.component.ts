@@ -12,7 +12,7 @@ import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, NgControlStatus, 
             multi: true,
         }],
     templateUrl: './input-message.component.html',
-    styleUrl: './input-message.component.scss'
+    styleUrls: ['./input-message.component.scss']
 })
 export class InputMessageComponent implements ControlValueAccessor {
   @Input() placeholder: string = '';

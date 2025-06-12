@@ -7,7 +7,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
   animations: [
     trigger('routeFade', [
       transition('* <=> *', [

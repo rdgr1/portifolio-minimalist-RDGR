@@ -6,7 +6,7 @@ import { LanguageStatusBarComponent } from '../language-status-bar/language-stat
     standalone: true,
     imports: [LanguageStatusBarComponent],
     templateUrl: './sobre-mim.component.html',
-    styleUrl: './sobre-mim.component.scss'
+    styleUrls: ['./sobre-mim.component.scss']
 })
 export class SobreMimComponent {
 

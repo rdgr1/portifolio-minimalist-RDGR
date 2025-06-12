@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     standalone: true,
     imports: [],
     templateUrl: './slider-logo.component.html',
-    styleUrl: './slider-logo.component.scss'
+    styleUrls: ['./slider-logo.component.scss']
 })
 export class SliderLogoComponent {
 

@@ -11,7 +11,7 @@ import { InputMessageComponent } from '../input-message/input-message.component'
     standalone: true,
     imports: [InputFormularioComponent, ReactiveFormsModule, InputMessageComponent, CommonModule],
     templateUrl: './formulario-layout.component.html',
-    styleUrl: './formulario-layout.component.scss'
+    styleUrls: ['./formulario-layout.component.scss']
 })
 export class FormularioLayoutComponent implements OnInit {
   isDisabled = false;
@@ -54,7 +54,6 @@ export class FormularioLayoutComponent implements OnInit {
   
     this.emailService.submitForm(name!, email!, message!).subscribe({
       next: (response) => {
-        console.log('Resposta do servidor:', response); // ✅ Debugando no console
         this.toastr.success(response.message, 'Sucesso');
   
         if (this.isBrowser) {
