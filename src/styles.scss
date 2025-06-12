@@ -5,12 +5,10 @@
   box-sizing: border-box;
   font-family: 'SF-Pro';
   scroll-behavior: smooth;
-  transition: 1s ease-in-out;
 }
 html, body {
   min-height: 100vh;
   color: var(--white);
-  background-color: var(--black);
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Garante que não haja rolagem horizontal indesejada */
@@ -19,7 +17,6 @@ html, body {
 :root {
   --white: white;
   --black: black;
-  background-color: var(--white);
   color: var(--black);
 }
 @font-face {
