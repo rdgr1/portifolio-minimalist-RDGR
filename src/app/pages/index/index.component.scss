@@ -73,7 +73,6 @@ app-background-gradient {
   align-items: center;
   position: relative;
   gap: clamp(20px, 10vw, 200px);
-  background: rgba(0, 0, 0, 0.423);
   .header-index {
     margin-top: 200px;
   }
@@ -121,7 +120,7 @@ app-background-gradient {
       right: 5%;
       top: 5%;
     }
-    .seta-wrapper{
+    .seta-wrapper {
       position: absolute;
       top: 85%;
     }
