@@ -5,6 +5,7 @@ import {
   Input,
   PLATFORM_ID,
   OnInit,
+  AfterViewInit,
 } from '@angular/core';
 import { HeaderIndexComponent } from '../../components/header-index/header-index.component';
 import { SetaComponentComponent } from '../../components/seta-component/seta-component.component';
@@ -27,7 +28,7 @@ import { SliderLogoComponent } from '../../components/slider-logo/slider-logo.co
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss'],
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent implements OnInit, AfterViewInit {
   isScrolled: boolean = false;
   @Input() isDarkMode: boolean = true;
   isHovered: boolean = false;
@@ -46,6 +47,31 @@ export class IndexComponent implements OnInit {
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.isDarkMode = localStorage.getItem('dark-mode') === 'true';
+    }
+  }
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const inter = document.querySelector<HTMLDivElement>('.interactive');
+      if (!inter) return;
+      let curX = 0;
+      let curY = 0;
+      let tgX = 0;
+      let tgY = 0;
+
+      const move = () => {
+        curX += (tgX - curX) / 20;
+        curY += (tgY - curY) / 20;
+        inter.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+        requestAnimationFrame(move);
+      };
+
+      window.addEventListener('mousemove', (event) => {
+        tgX = event.clientX;
+        tgY = event.clientY;
+      });
+
+      move();
     }
   }
 
@@ -75,3 +101,4 @@ export class IndexComponent implements OnInit {
     }
   }
 }
+
