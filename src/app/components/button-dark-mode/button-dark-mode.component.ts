@@ -46,9 +46,13 @@ export class ButtonDarkModeComponent implements AfterViewInit, OnInit{
       if (this.isActive) {
         root.style.setProperty('--black', 'black');
         root.style.setProperty('--white', 'white');
+        root.style.setProperty('--highlight', '#ff0077');
+        root.style.setProperty('--highlight-rgb', '255, 0, 119');
       } else {
         root.style.setProperty('--black', 'white');
         root.style.setProperty('--white', 'black');
+        root.style.setProperty('--highlight', '#ff0077');
+        root.style.setProperty('--highlight-rgb', '255, 0, 119');
       }
     }
 }
