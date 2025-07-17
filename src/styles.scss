@@ -5,7 +5,6 @@
   box-sizing: border-box;
   font-family: 'SF-Pro';
   scroll-behavior: smooth;
-  transition: 1s ease-in-out;
 }
 html, body {
   min-height: 100vh;
@@ -17,9 +16,9 @@ html, body {
 }
 
 :root {
-  --white: white;
-  --black: black;
-  background-color: var(--white);
+  --white: rgba(255, 255, 255);
+  --black: rgba(0, 0, 0,);
+  background-color: url("/src/assets/imgs/png/background.png");
   color: var(--black);
 }
 @font-face {

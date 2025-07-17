@@ -2,8 +2,6 @@
   <div class="navbar"
       (mouseover)="setHovered(true)"
       (mouseleave)="setHovered(false)">
-      <!-- 🔹 No Desktop: Navbar aparece apenas no hover -->
-      <!-- 🔹 No Mobile: Navbar sempre aparece -->
       <app-nav-bar *ngIf="isHovered || isMobile"></app-nav-bar>
   </div>
 
