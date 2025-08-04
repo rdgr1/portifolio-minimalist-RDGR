@@ -21,8 +21,8 @@
     &.active {
       background-color: white;
       .circle {
-        width: clamp(13px,2vw,23px);
-        height: clamp(13px,2vw,23px);
+        width: clamp(13px,2vw,20px);
+        height: clamp(13px,2vw,20px);
         background-color: black;
         left: calc(100% - 28px);
       }
@@ -30,8 +30,8 @@
   }
 
   .circle {
-    width: clamp(13px,2vw,23px);
-    height: clamp(13px,2vw,23px);
+    width: clamp(13px,2vw,20px);
+    height: clamp(13px,2vw,20px);
     border-radius: 50%;
     background-color: white;
     position: absolute;
