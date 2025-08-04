@@ -19,6 +19,9 @@ nav {
     color: var(--white);
     background-color: var(--black);
     border-radius: 5px;
+    svg {
+        width: clamp(20px,5vw,45px);
+    }
   }
 
   .container-navbar {

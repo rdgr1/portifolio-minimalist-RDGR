@@ -1,54 +1,54 @@
 header {
-    width: 100%;
     display: flex;
-    flex-direction: row; /* Alinha os elementos verticalmente */
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding-bottom: 35px;
-    position: relative;
-    gap: clamp(5px,2vw,20px); /* Define um contexto para posicionamento */
-    min-height: 15vh;
-    h1 {
-        font-family: 'SF-pro';
-        font-weight: 650;
-        font-size: clamp(2rem,10vw,115px);
-        position: relative;
-        z-index: 1;
-        text-align: center; /* Garante que fique centralizado */
-        margin: 0; /* Remove margem lateral fixa */
+    justify-content: center;
+    .primary-container {
+        span {
+            font-family: 'Satoshi-Light';
+            font-size: clamp(10px, 7vw, 50px);
+        }
+
+        h1 {
+            font-family: 'Satoshi-Bold';
+            font-size: clamp(20px, 13vw, 100px);
+        }
     }
-    .subtitle-container {
+    .secondary-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        font-family: 'SF-pro';
-        font-size: clamp(1.5rem,7vw,48px);
-        font-weight: 200;
-        padding: 10px 0px 0px 0px;
-            display: flex;
-            gap: 10px; /* Espaçamento entre os ícones */
-            margin-top: 10px;
-        }
         .icons-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        .icons {
             display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .icons-container img, .icons-container svg {
-            width: clamp(30px,4w,60px); 
-            height: auto;
-            padding: 5px;
-        }
-         .icons-container svg {
-            fill: var(--white);
-        }
-        @media (max-width: 768px) {
-            position: relative;
-           flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            padding: 20px;
-            gap: 15px;
-            z-index: 1;
+            justify-content: center;
+            gap: clamp(15px, 5vw, 70px);
+            padding-top: 5px;
+            svg {
+                width: clamp(30px, 4vw, 45px);
+            }
         }
-}    
-
+        }
+        .icons-box {
+            padding-top: 50px;
+            span {
+                font-family: 'Satoshi-Light';
+                font-size: clamp(16px, 3vw, 23px);
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+        z-index: 1;
+    }
+}
