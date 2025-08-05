@@ -15,7 +15,6 @@ export class NavBarComponent implements AfterViewInit, OnDestroy {
 
   activeLink: string = 'inicio';
   isMenuOpen: boolean = false;
-  isInProjectSection: boolean = false;
   isBrowser: boolean;
   private btnMobileListener: (() => void) | null = null; // Guarda referência do evento
 
@@ -27,7 +26,6 @@ export class NavBarComponent implements AfterViewInit, OnDestroy {
     this.isBrowser = isPlatformBrowser(this.platformId);
 
     this.router.events.subscribe(() => {
-      this.isInProjectSection = this.router.url === '/projetos';
       this.isMenuOpen = false; // Fecha o menu ao mudar de página
     });
   }

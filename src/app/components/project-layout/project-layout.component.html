@@ -1,11 +1,10 @@
 <div class="project-container">
-    <div class="header" (mouseover)="isHovered = true" (mouseleave)="isHovered = false">
-        <h1 *ngIf="!isHovered || isMobile">Projetos</h1>
-         <app-nav-bar *ngIf="isMobile || isHovered" ></app-nav-bar>
-            <span *ngIf="isMobile" class="aviso">Dê um clique para ver a descrição</span>
+    <app-nav-bar></app-nav-bar>
+    <div class="header">
+        <h1>Projetos</h1>
+        <span *ngIf="isMobile" class="aviso">Dê um clique para ver a descrição</span>
     </div>
     <app-project-carousel-modal #carouselModal></app-project-carousel-modal>
-    <!-- 📌 Desktop: Exibir grid de projetos -->
     <div class="container-cards desktop">
         <app-card-projeto *ngFor="let projeto of projetos"
             [title]="projeto.title"
@@ -19,8 +18,6 @@
             (openCarousel)="abrirModal(projeto.images)">
         </app-card-projeto>
     </div>
-
-    <!-- 📌 Mobile: Carrossel de projetos -->
     <div class="carousel mobile">
         <button class="carousel-btn left" (click)="prevSlide()">←</button>
         <div class="carousel-wrapper">

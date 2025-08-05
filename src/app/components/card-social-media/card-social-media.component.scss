@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  
+  a {
+    padding-top: 10px;
+    width: 100%;
+    text-decoration: none;
+  }
+  img {
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 45px;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-family: 'Satoshi-Bold';
+      font-size: 18px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    p {
+      font-family: 'Satoshi-Light';
+      font-size: 14px;
+    }
+  }
+
+  &.card--gmail {
+    background-image: url('/assets/imgs/cards/bg/Card-Gmail.svg');
+    a { color: black; }
+    h1 { color: #3f3f3f; }
+  }
+
+  &.card--linkedin {
+    background-color: #0A66C2;  
+    background-image: url('/assets/imgs/cards/bg/Card-Linkedin.png');
+    a { color: #fff;  }
+  }
+
+  &.card--github {
+    background-color: #171515;  // preto da marca
+    background-image: url('/assets/imgs/cards/bg/Card-Github.png');
+    a { color: #fff;  }
+  }
+
+  &.card--instagram {
+    background-image: url('/assets/imgs/cards/bg/Card-Instagram.svg');
+    a { color: #fff;  }
+  }
+}
