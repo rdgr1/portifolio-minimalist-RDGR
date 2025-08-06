@@ -1,129 +1,136 @@
-.main-container{
+.main-container {
     width: 100%;
     background-color: var(--black);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h2{
+
+    h2 {
+        font-size: clamp(12px, 5vw, 26px);
+        text-align: center;
         font-weight: 400;
+        padding-bottom: 25px;
     }
-    .container-text-pic{
+
+    .container-text-pic {
         display: flex;
-        justify-content: space-between;
+        width: 80%;
+        justify-content: space-around;
         align-items: center;
-        gap: clamp(60px,5vw,300px);
         margin-top: 13px;
-        .texto-sobre-mim h2{
-            font-size: clamp(12px,5vw,32px);
-            text-align: center;
-            padding-bottom: 24px;
-            transition: all 0.9s ease-in-out;
-           }
-           p{
-            font-weight: 200;
-            font-size: clamp(7px,3vw,20px);
-            text-align: center  ;
-            transition: all 0.9s ease-in-out;
-           }
-           .personal-pic{
-            img{
-                width: clamp(130px,20vw,250px);
+
+        .texto-sobre-mim {
+            flex: 1;
+            max-width: 600px;
+            margin: 0;
+            padding: 0;
+
+            p {
+                font-family: 'Satoshi-Light';
+                font-size: 17px;
+                line-height: 1.6;
+                white-space: pre-wrap;
+                text-align: center;
+                text-justify: inter-word;
+                color: inherit;
+
+                strong {
+                    font-family: 'Satoshi-Bold';
+                }
+            }
+
+
+        }
+
+        .personal-pic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-right: 90px;
+
+            img {
+                width: clamp(130px, 20vw, 250px);
                 border-radius: 100%;
             }
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 60px;
-            gap: clamp(5px,2vw,20px);
-            font-weight: 600;
-            span {
-                font-size: clamp(10px,5vw,27px);
-            }
-            .container-icons {
-                display: flex;
-                gap: 20px;
-              }
-              
-              .icons {
-                display: inline-block;
-                color: var(--white); /* Define a cor dos ícones */
-              }
-              .icons svg {
-                width: 35px;
-                height: 35px;
-                fill: currentColor;
-                transition: transform 0.3s ease-in-out;
-              }
-              .icons:hover svg {
-                transform: scale(1.1);
-              }
-        }
-    }
-    .container-experiencia-linguagens{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: clamp(80px,10vw,250px);
-        .experiencia-card{
-            display: flex;
-            .pin-timeline{
-                img{
-                    width: clamp(3px,1vw,15px);
-                    height: clamp(60px,10vw,168px);
-                }
-                margin-top: 30px;
-                padding: clamp(10px,5vw,30px);
-            }
-            .experiencia {
+            gap: 20px;
+            .bio {
                 display: flex;
                 flex-direction: column;
-                h2{
-                    text-align: center;
-                    font-size: clamp(14px,5vw,32px);
-                    padding-bottom: 35px;
+                justify-content: flex-start;
+                .name {
+                    font-family: 'Satoshi-Regular';
+                    font-size: 22px;
                 }
-                h3{
-                    font-size: clamp(8px,3vw,22px);
-                    padding-bottom: 13px;
-                    font-weight: 800;
+
+                .employee {
+                    font-family: 'Satoshi-BoldItalic';
+                    font-size: 18px;
                 }
-                h4{
-                    font-weight: 600;
-                    font-size: clamp(12px,3vw,20px);
-                    padding-bottom: 15px;
+
+                .age {
+                    font-family: 'Satoshi-Regular';
+                    font-size: 16px;
                 }
-                p{
-                    font-weight: 500;
-                    font-size: clamp(10px,3vw,16px);
-                    padding-bottom: 10px;
-                }
-                span{
-                    display: flex;
-                    justify-content: center;
-                    font-size: clamp(11px,3vw,17px);
-                    font-weight: 800;
+
+                .city {
+                    font-family: 'Satoshi-Light';
+                    font-size: 16px;
                 }
             }
         }
-        .linguagens-card{
+    }
+
+    .container-stack-link {
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        margin-top: 17px;
+
+        .my-stack {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            h2{ 
-                font-size: clamp(12px,5vw,32px);
-                margin-bottom: 25px;
+
+            .icons {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                gap: 30px;
+
+                svg {
+                    width: 75px;
+                    height: 75px;
+                }
             }
-        }    
+        }
+
+        .links-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .cards {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 30px;
+            }
+        }
     }
+
     @media (max-width:768px) {
-        .container-text-pic, .container-experiencia-linguagens{
+
+        .container-text-pic,
+        .container-experiencia-linguagens {
             display: flex;
             flex-direction: column;
         }
-        .container-experiencia-linguagens .linguagens-card{
+
+        .container-experiencia-linguagens .linguagens-card {
             padding-bottom: 20px;
         }
     }

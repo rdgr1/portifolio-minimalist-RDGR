@@ -6,7 +6,6 @@ nav {
   max-width: 900px;
   height: 65px;
   border-radius: 22px;
-  background-color: var(--white);
   margin: 20px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
@@ -35,19 +34,17 @@ nav {
       gap: 0.5rem;
       list-style: none;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 20px;
       padding-left: 50px;
-      background-color: var(--white);
     }
 
     .nav-item {
       position: relative;
-
       .nav-link {
+        font-family: 'Satoshi-Light';
         text-decoration: none;
-        color: var(--black);
+        color: var(--white);
         transition: color 0.3s ease;
-        background-color: var(--white);
         cursor: pointer;
         padding: 0.5rem;
 
@@ -60,9 +57,9 @@ nav {
           position: absolute;
           left: 50%;
           bottom: -5px;
-          width: 20%;
-          height: 3px;
-          background-color: var(--black);
+          width: 17%;
+          height: 2px;
+          background-color: var(--white);
           border-radius: 12px;
           transition: width 0.3s ease;
           transform: translateX(-50%);
@@ -71,52 +68,48 @@ nav {
     }
 
     span {
-      margin-right: 10px;
+      margin-right: 9px;
     }
 
     .buttom-resumo {
       text-decoration: none;
       font-weight: 600;
-      color: var(--white);
-      padding: 10px 20px;
-      background-color: var(--black);
+      color: var(--black);
+      padding: 10px 18px;
+      background-color: var(--white);
       margin-left: 35px;
-      font-size: 19px;
+      font-size: 22px;
       border-radius: 12px;
-
       &:hover {
         transition: background 0.9s ease-in-out;
         padding: 10px 18px;
         background-color: transparent;
-        border: var(--black) solid 2px;
-        color: var(--black);
+        border: var(--white) solid 2px;
+        color: var(--white);
       }
     }
   }
 }
 
-// **⏳ Esconde a navbar quando a rota for "/projetos"**
 .hidden {
   position: fixed;
-  top: -80px; // Esconde a navbar acima da tela
+  top: -80px;
   left: 0;
   width: 100%;
   opacity: 0;
-  pointer-events: none; // Evita interferências nos cliques
+  pointer-events: none; 
   transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-// **🖱️ Faz a navbar reaparecer quando o mouse está no topo da tela**
 .hidden:hover {
   top: 0;
   opacity: 1;
   pointer-events: auto;
 }
 
-// **🎯 Responsividade para telas menores que 768px**
 @media (max-width: 768px) {
   nav {
-    width: 100%; // 🔹 Mantém a navbar visível
+    width: 100%; 
     height: auto;
     flex-direction: column;
     align-items: flex-start;
@@ -125,10 +118,10 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999; // 🔹 Mantém a navbar sempre visível sobre os outros elementos
+    z-index: 9999; 
 
     .btn-mobile {
-      display: block; // Mostra o botão no mobile
+      display: block; 
       position: absolute;
       top: 5%;
       left: 2%;
@@ -136,7 +129,7 @@ nav {
       border: none;
       font-size: 24px;
       cursor: pointer;
-      z-index: 10000; // 🔹 Mantém o botão acima da navbar
+      z-index: 10000; 
 
       svg path {
         fill: var(--white);
@@ -172,13 +165,13 @@ nav {
       ul {
         background: transparent;
         padding: 0;
-        position: relative; // 🔹 Evita que os itens fiquem desalinhados
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 20px;
         z-index: 9999;
-        left: -1%; // 🔹 Move os itens mais para a esquerda
-        text-align: left; // 🔹 Mantém o alinhamento à esquerda
+        left: -1%;
+        text-align: left; 
         width: 100%;
         z-index: 999;
       }
@@ -195,8 +188,8 @@ nav {
             transition: background 0.9s ease-in-out;
             padding: 20px 38px;
             background-color: transparent;
-            border: var(--black) solid 2px;
-            color: var(--black);
+            border: var(--white) solid 2px;
+            color: var(--white);
           }
     }
       span {
@@ -212,7 +205,6 @@ nav {
       }
     }
   }
-  // 🔹 Exibe a navbar ao clicar no botão hamburguer
   .container-navbar.active {
     display: flex;
   }
