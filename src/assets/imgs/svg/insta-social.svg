@@ -1,0 +1,23 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_di_10_144)">
+<path d="M9.69534 0C6.55511 0 4 2.55662 4 5.69763V13.8351C4 16.9758 6.55662 19.5312 9.69763 19.5312H17.8351C20.9758 19.5312 23.5312 16.9746 23.5312 13.8336V5.69534C23.5312 2.55511 20.9746 0 17.8336 0H9.69534ZM19.625 3.125C20.0562 3.125 20.4062 3.475 20.4062 3.90625C20.4062 4.3375 20.0562 4.6875 19.625 4.6875C19.1938 4.6875 18.8438 4.3375 18.8438 3.90625C18.8438 3.475 19.1938 3.125 19.625 3.125ZM13.7656 4.6875C16.5664 4.6875 18.8438 6.96484 18.8438 9.76562C18.8438 12.5664 16.566 14.8438 13.7656 14.8438C10.9648 14.8438 8.6875 12.566 8.6875 9.76562C8.6875 6.96523 10.9648 4.6875 13.7656 4.6875ZM13.7656 6.25C11.8238 6.25 10.25 7.82383 10.25 9.76562C10.25 11.7074 11.8238 13.2812 13.7656 13.2812C15.7074 13.2812 17.2812 11.7074 17.2812 9.76562C17.2812 7.82383 15.7074 6.25 13.7656 6.25Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_di_10_144" x="0" y="-1" width="27.5312" height="28.5312" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_10_144"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_10_144" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-1"/>
+<feGaussianBlur stdDeviation="0.9"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_10_144"/>
+</filter>
+</defs>
+</svg>
