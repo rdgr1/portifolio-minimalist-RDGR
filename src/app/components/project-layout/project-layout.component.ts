@@ -102,7 +102,7 @@ export class ProjectLayoutComponent {
   ];
 
   navigateTo() {
-    this.router.navigate(['contato']);
+    this.router.navigate(['exp']);
   }
 
   prevSlide() {
