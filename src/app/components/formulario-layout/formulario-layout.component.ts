@@ -72,5 +72,7 @@ export class FormularioLayoutComponent implements OnInit {
       }
     });
   }
-  
+  notFound(){
+    this.toastr.info('Estamos em manunteção, contate por email','Info')
+  }
 }

@@ -60,7 +60,7 @@ export class ProjectLayoutComponent {
     },
     {
       title: 'Aprendizado de Spring',
-      text: 'projeto de aprendizado prático para explorar os conceitos e melhores práticas do Spring Boot. Ele serve como um guia para desenvolvedores que desejam se aprofundar no desenvolvimento de aplicações Java com a estrutura Spring Boot',
+      text: 'projeto de aprendizado prático para explorar os conceitos e melhores práticas do Spring Boot. Ele serve como um guia para desenvolvedores que desejam se aprofundar em aplicações Java com a estrutura Spring Boot',
       linkImg: '/assets/imgs/cards/CardSpringAprendizado.png',
       linkGithub: 'https://github.com/rdgr1/springboot-learning-rod',
       disableImg: true,

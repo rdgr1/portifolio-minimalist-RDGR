@@ -1,6 +1,7 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, ViewEncapsulation, AfterViewInit, Inject, PLATFORM_ID, Renderer2, ElementRef, ViewChild, OnDestroy } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
+import {  ToastrService } from 'ngx-toastr';
 
 @Component({
     selector: 'app-nav-bar',
@@ -21,7 +22,8 @@ export class NavBarComponent implements AfterViewInit, OnDestroy {
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private toast: ToastrService
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
 
@@ -61,5 +63,16 @@ export class NavBarComponent implements AfterViewInit, OnDestroy {
       this.btnMobileListener();
       this.btnMobileListener = null;
     }
+  }
+
+  openWithToast(event: MouseEvent) {
+    if (!this.isBrowser) return;
+    event.preventDefault();
+    this.toast.success('Redirecionando pro CV...','Aviso');
+    const el = event?.currentTarget as HTMLAnchorElement;
+    const href = el.href;
+    setTimeout(
+      () => { window.open(href, '_blank'); }, 1500
+    );
   }
 }
