@@ -1,0 +1,112 @@
+:host {
+  display: block;
+  animation: movedown 1s ease-in-out forwards, fadein 1s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  z-index: 1;
+
+  img {
+    position: absolute;
+    width: 55px;
+    right: -20px;
+    top: 32px;
+    box-shadow: 0 0px 16px rgba(134, 134, 134, 0.5);
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    background: rgba(187, 187, 187, 0.08);
+    border: 1px solid rgba(187, 187, 187, 0.523);
+    box-shadow: 0 0px 16px rgba(134, 134, 134, 0.87);
+    backdrop-filter: blur(20px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+    position: relative;
+    color: var(--white);
+
+    h2 {
+      font-size: 1.1rem;
+      font-family: "Satoshi-Light", sans-serif;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-family: "Sf-pro", sans-serif;
+    }
+
+    .date small {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      justify-content: center;
+      font-family: 'Satoshi-Bold', sans-serif;
+      padding: 0px 20px 0px 20px;
+      color: #bfbfbf;
+    }
+
+    p {
+      font-family: 'Satoshi-Light', sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .left-container-arrow {
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 28px;
+      z-index: 1;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 15px solid var(--black);
+      right: -15px;
+    }
+
+    .right-container-arrow {
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 28px;
+      z-index: 1;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 15px solid var(--black);
+      left: -15px;
+    }
+  }
+}
+
+.container-left {
+  left: 0;
+}
+
+.container-right {
+  left: 50%;
+
+  img {
+    left: -20px;
+  }
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

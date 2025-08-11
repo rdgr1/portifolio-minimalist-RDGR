@@ -1,0 +1,20 @@
+<div class="container">
+    <app-nav-bar></app-nav-bar>
+    <div class="title">
+        <h1>Experiências</h1>
+    </div>
+    <div class="timeline">
+        <app-card-exp
+        *ngFor="let exp of exps_form"
+        [title]="exp.title"
+        [subtitle]="exp.subtitle"
+        [text]="exp.text"
+        [date]="exp.date"
+        [pos]="exp.pos"
+        [link]="exp.link"
+        ></app-card-exp>
+    </div>
+        <app-seta-component
+        (navigate)="navigate()"
+        ></app-seta-component>
+</div>

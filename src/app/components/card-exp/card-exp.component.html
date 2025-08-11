@@ -1,0 +1,12 @@
+<div class="container" [ngClass]="'container-' + pos">
+        <img [src]="link">
+    <div class="texts">
+        <h2> {{ title }} </h2>
+        <h3> {{ subtitle }} </h3>
+        <div class="date">
+        <small> {{ date }} </small>
+        </div>
+        <p> {{ text }} </p>
+        <span [ngClass]="pos + '-container-arrow'"></span>
+    </div>
+</div>
