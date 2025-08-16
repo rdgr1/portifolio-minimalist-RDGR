@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class SobreMimComponent {
     social_medias = [
         {
-            linkNav: "mail:torodger.dev777@gmail.com",
+            linkNav: "mailto:rodger.dev777@gmail.com?subject=Contato%20Portf%C3%B3lio%3A%20(Seu%20nome)&body=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20para%20tratar%20sobre...",
             linkImg: "/assets/imgs/svg/gmail-icon.svg",
             title: "Gmail",
             username: "@rodger.dev777",
