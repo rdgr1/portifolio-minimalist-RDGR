@@ -80,7 +80,7 @@ mvn spring-boot:run
 
 ⸻
 
-Feito com ❤️ por RDGR 🚀
-Se gostou, não se esqueça de deixar uma ⭐ no repositório! 😊
+Feito por RDGR 🚀
+
 
 ---
