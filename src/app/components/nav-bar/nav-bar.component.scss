@@ -166,8 +166,8 @@ nav {
         background: transparent;
         padding: 0;
         position: relative;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: auto auto;
         gap: 20px;
         z-index: 9999;
         left: -1%;
@@ -179,26 +179,27 @@ nav {
         text-decoration: none;
         font-weight: 600;
         color: var(--white);
-        padding: 20px 40px;
+        padding: 15px 25px;
         background-color: var(--black);
         margin-left: 35px;
-        font-size: 30px;
+        font-size: 22px;
         border-radius: 12px;
         &:hover {
             transition: background 0.9s ease-in-out;
-            padding: 20px 38px;
+            padding: 12px 20px;
             background-color: transparent;
-            border: var(--white) solid 2px;
-            color: var(--white);
+            border: var(--black) solid 2px;
+            color: var(--black);
           }
     }
       span {
-        right: 12%;
-        top: 40%;
+        right: 15%;
+        top: 65%;
         position: absolute;
         z-index: 1003;
       }
       .nav-item .nav-link {
+        color: var(--black);
         &.active::after {
             background: transparent;
         }

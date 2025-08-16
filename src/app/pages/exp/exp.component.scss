@@ -14,6 +14,7 @@
             font-family: 'Sf-pro';
             font-size: 2rem;
             font-weight: 200;
+            padding-bottom: 30px;
         }
     }
 
@@ -65,6 +66,23 @@
             100% {
                 height: 100%;
             }
+        }
+    }
+    app-seta-component {
+        padding-top: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        .timeline {
+            margin: 0px;
+            app-card-exp {
+                margin: 10px;
+            }
+        }
+        .title {
+            padding-left: 9em;
+            margin-top: 45px;
         }
     }
 }
